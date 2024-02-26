@@ -1,43 +1,14 @@
-:root {
-    --light_2: #d9dadb;
-    --gray_2: #868789;
-    --purple_2: #9f3ed5;
-    --blue_2: #003960;
-    --light: #f8f9fa;
-    --whiteblue: #05b7fa;
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --dark: #343a40;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+header {
+  background-color: #003960;
+  width: 100%;
+  height: 90px;
 }
+
 
 html{scroll-behavior:smooth;overflow-x: hidden;}
 body {font-family: 'Circe Rounded';color:#161616;overflow-x: hidden;}
 .state-overflow{overflow: hidden;}
-a{color:#3083DA;}
+a{color:#003960;}
 
 header{position: fixed;top:0;width:100%;z-index: 100;	-moz-transition:all .3s ease;-webkit-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease;}
 header.scroll, header.mob{box-shadow: 0 0 15px rgba(0,0,0,.15);background: rgba(255,255,255,.98);}
@@ -46,15 +17,19 @@ header.scroll a, header.mob a{color:#161616;}
 header.mob{background: #FFF;overflow-y:scroll;bottom:0;}
 header.mob .navbar-toggler span, header.mob .navbar-toggler span::before, header.mob .navbar-toggler span::after,
 header.scroll .navbar-toggler span, header.scroll .navbar-toggler span::before, header.scroll .navbar-toggler span::after{background: #161616;}
+header .nav-link {color:#F4F4F2;}
 
+.navbar-nav{display: inline-block;}
+.navbar-nav a {display: block;}
+header .nav-link{position: inherit; margin-top: -30px;}
 header.mob .phone{margin-top: 40px;}
 header .phone a:nth-child(1){font-size: 20px;display: block;line-height: 20px;}
 header .phone a:nth-child(2), footer .phone a:nth-child(2){font-size: 14px;display: inline-block;border-bottom: 1px dashed;line-height: 16px;}
 header .phone a:nth-child(2):hover, footer .phone a:nth-child(2):hover{text-decoration: none;border-color:transparent;}
-header.scroll .phone a:nth-child(2), header.mob .phone a:nth-child(2){color:#3083DA;}
+header.scroll .phone a:nth-child(2), header.mob .phone a:nth-child(2){color:#003960;}
 
-.navbar-brand{display: block; background: url(img/logo.png) 0 0 no-repeat;background-size: 80px 80px;width:80px;height:80px;}
-header.scroll .navbar-brand, header.mob .navbar-brand{background-image: url(img/logo2.png);background-size: 111px 54px;}
+.navbar-brand{display: block; background: url(../img/logo.png) 0 0 no-repeat;background-size: 100px 80px;position: inherit; margin-top: -0.2%; width:150px; height:100px;}
+header.scroll .navbar-brand, header.mob .navbar-brand{background-image: url(../img/logo2.png);background-size: 100px 80px;}
 /*-----------------------MENU-------------------------*/
 
 .navbar{padding:16px 0;	-moz-transition:all .2s ease;
@@ -85,26 +60,5 @@ header.scroll .navbar-brand, header.mob .navbar-brand{background-image: url(img/
 
 .navbar-nav .nav-link{font-size: 24px;}
 .navbar-nav .nav-link:hover{color:#F4F4F2;}
-.mob .navbar-nav .nav-link:hover, .scroll .navbar-nav .nav-link:hover{color:#3083DA;}
-.navbar-nav .active>.nav-link{color:#3083DA;}
-
-/*======================MENU_END======================*/
-h1, .h1{font-size: 48px;}
-.title{display: flex;height:100%;align-items: center;}
-h2, .h2{margin-bottom: 30px;}
-
-#slider{position: relative;}
-#slider img{object-fit: cover;height:100vh;max-height: 600px;min-height: 460px;}
-#slider .container{position: absolute;top:0px;height:100%;display: inline-flex;align-items: center;}
-#slider .container div{width:75%;}
-#slider .container p{font-size: 18px;line-height: 20px; color:#FFF;margin-bottom: 0px;}
-#slider .container p.h1{font-size: 30px;line-height: 30px;margin-bottom: 10px;}
-#slider .container p.h2{font-size:22px;line-height:24px;margin-bottom: 30px;}
-#slider .container a{display: inline-block;background: #161616;color:#FFF;line-height: 30px;border-radius: 4px;padding:5px 30px;position: relative;margin-top: 30px;}
-#slider .container a:hover{background:#3083da;}
-.carousel-control-next, .carousel-control-prev {display: none;}
-.carousel-control-prev-icon, .carousel-control-next-icon{background-color: #FFF;width:40px;height:40px;border-radius: 50%;background-size: 10px 20px;}
-.carousel-control-prev-icon {background-image: url(../img/left.svg);}
-.carousel-control-next-icon {background-image: url(../img/right.svg);}
-.carousel-indicators li {width:10px;height: 10px;border-radius: 50%;background: #B4AFAB;border:1px solid transparent;margin:0 8px;}
-.carousel-indicators .active {background-color: #065E84;border:1px solid #FFF;}
+.mob .navbar-nav .nav-link:hover, .scroll .navbar-nav .nav-link:hover{color:#003960;}
+.navbar-nav .active>.nav-link{color:#003960;}
