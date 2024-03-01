@@ -1,0 +1,50 @@
+.slide_three {
+    background-color: white;
+    display: block;
+    width: 100%;
+    height: 720px;
+  }
+.slide_three .name_slide_three {
+    display: block;
+    width: 100%;
+    height: 60px;
+    margin-top: 10%;
+}
+.slide_three .jobs_photo {
+    display: block;
+    text-align: center;
+    font-size: 24px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    color: #B48246;
+}
+
+.slide_three .main_class_slider{
+    display: inline-block;
+    margin-top: 5%;
+    color: #ddd;
+    height: 400px;
+    width: 100%;
+}
+.slider_scroll .slider_one {
+    display: inline-block;
+    border: 2px black;
+    padding: 10px;
+    text-align: center;
+    background-size: 250px 250px;
+}
+.slider_scroll .slider_two {
+    display: inline-block;
+    text-align: center;
+    background-size: 250px 250px;
+}
+.slider_scroll .slider_three {
+    display: inline-block;
+    text-align: center;
+    background-size: 250px 250px;
+}
+.slider_scroll {
+    width: 1600;
+    height: 400px;
+    margin-top: 30px;
+}
+.slide_three .band {width: 100%;height: 5px;background-color: #4682B4;}

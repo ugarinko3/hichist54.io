@@ -1,0 +1,17 @@
+.menu {
+  background-color: #fff;
+  width: 100%;
+  height: 80px;
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+}
+.left_logo {
+  display: table-cell;
+  vertical-align: middle
+}
+.slide_main {
+  background-color: #4682B4;
+  position: relative;
+  height: 800px;
+}

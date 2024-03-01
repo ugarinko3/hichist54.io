@@ -1,0 +1,126 @@
+.slide_two {
+  background-color: white;
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+.slide_two .name_class_two {
+    display: block;
+    width: 100%;
+    height: 60px;
+    margin-top: 6%;
+}
+.slide_two .jobs {
+    display: block;
+    text-align: center;
+    font-size: 24px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    color: #B48246;
+}
+.slide_two .jobs_prime{
+    margin-top: -15px;
+    text-align: center;
+    font-size: 16px; /* Размер шрифта */
+    color: #868789;
+}
+.slide_two .prime_in_company {
+    display: inline-block;
+    margin-top: 5%;
+    color:#d9dadb;
+    height: 400px;
+}
+.icons .table {
+    display: inline-block;
+    margin-left: 140px;
+    width: 320px;
+}
+.icons {
+    width: 100%;
+    height: 100%;
+}
+.icons .row {
+    width: 100%;
+    height: 100%;
+}
+
+.icons .title {
+    font-size: 18px;
+    color: #4682B4;
+}
+.icons .item_desc {
+    color: #868789;
+}
+
+
+.triangle {
+    background: #868789;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    color: #fff;
+    margin-top: 1px;
+}
+.triangle::after {
+    content: ''; 
+    position: absolute;
+    left: 20px; bottom: -20px;
+    border: 10px solid transparent;
+    border: 20px solid transparent;
+    border-top: 20px solid #868789;
+    border-right: 20px solid #868789; 
+}
+
+
+
+
+
+
+
+
+
+/* <div class="slide_left">
+                <div class="logo logo_text">
+                    <div class="logo">
+                        <img class="logo_company" src="{% static 'home_page/img/logo/logo.png' %}" style="width: 120px; height: 120px;">
+                    </div>
+                    <div class="logo_text">
+                        <h2 class="title_in_company">Фабрика стирки ковров</h2>
+                    </div>   
+                </div>
+                <div class="word" >
+                    <p>Надежный партнер по Новосибирску чистоты и уюта в вашем доме! Мы - это не просто компания, мы - фабрика качественной чистки ковров, в которой каждая нить и каждое волокно вашего ковра обрабатывается с любовью и заботой.</p>
+                </div>
+            </div>
+            <div class="slide_right">
+                <div class="telephone_slide">
+                    <div class="info_number_icon info_number_phone">
+                        <div class="info_number_icon">
+                            <img class="logo_phone" src="{% static 'home_page/img/icon_slade/Layer_13.png' %}" style="width: 60px; height: 60px;">
+                        </div>
+                        <div class="info_number_phone">
+                            <a class="text_number">+7 (913) 737-82-83</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="time">
+                    <div class="info_time info_time_text">
+                        <div class="info_time">
+                            <img class="logo_time" src="{% static 'home_page/img/icon_slade/8yo_hours.png' %}" style="width: 60px; height: 60px;">
+                        </div>
+                        <div class="info_time_text">
+                            <p class="text_time">09:00 - 21:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="location">
+                    <div class="info_location info_location_text">
+                        <div class="info_location">
+                            <img class="logo_location" src="{% static 'home_page/img/icon_slade/education_location.png' %}" style="width: 55px; height: 70px;">
+                        </div>
+                        <div class="info_location_text">
+                            <p class="location_text">г.Новосибирск, ул.Обская 50</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> */

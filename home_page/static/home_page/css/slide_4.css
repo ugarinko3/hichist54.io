@@ -1,0 +1,36 @@
+.slide_four {
+    width: 100%;
+    height: 1200px;
+    background-color: #fff;
+}
+.slide_four .fon_slide_four {
+    background: url(../img/fon_carpet.png);
+    height: 1200px;
+    background-position: 100% bottom;
+    background-repeat: no-repeat;
+}
+.slide_four .class_slide_four {
+    display: block;
+    width: 100%;
+    height: 700px;
+
+}
+.slide_four .name_class_four {
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+.slide_four .name_class_four p {
+    text-align: center;
+    display: block;
+    font-size: 28px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    color: #B48246;
+}
+.slide_four .services {
+    display: block;
+    margin-left: 10%;
+    width: 100%;
+    height: 300;
+} 
