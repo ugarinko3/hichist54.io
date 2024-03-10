@@ -1,0 +1,194 @@
+.slide_five {
+    display: grid;
+    grid-auto-flow: row;
+    margin-top: 70px;
+    width: 100%;
+}
+.calculator {
+    width: 55%;
+    height: 100%;
+    display: grid;
+    justify-self: center;
+    grid-auto-rows: auto;
+    color: white;
+    border: 2px solid #B48246;
+    border-radius: 30px;
+    text-align: center;
+}
+.materials {
+    justify-self: center;
+    width: 98%;
+    height: 15%;
+    margin-top: 35px;
+}
+.manufacturing {
+    justify-self: center;
+    width: 98%;
+    height: 15%;
+    margin-top: 35px;
+}
+.slide_five .input_choice {
+    width: 98%;
+    height: 60px;
+    border-radius: 15px;
+    border: 2px solid #4682B4;
+}
+option {
+    color:#1f2024;
+}
+select {
+    color:#1f2024;
+    border:1px solid #c9c9c9;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    width: 98%;
+}
+.slide_five .square_carpet {
+    justify-self: center;
+    width: 98%;
+    height: 15%;
+}
+.slide_five .square {
+    display: grid;
+    justify-self: center;
+    grid-auto-rows: auto;
+    margin-top: 35px;
+}
+.slide_five .input {
+    width: 98%;
+    height: 60px;
+    justify-self: center;
+    border-radius: 15px;
+    border: 2px solid #4682B4;
+}
+.label_flex {
+    display: flex;
+    margin-top: 15px;
+    
+}
+.slide_five .text_title {
+    text-align: left;
+}
+.slide_five .text {
+    color: #003960;
+    font-size: 24px;
+}
+.text_label {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    color: #003960;
+    font-size: 18px;
+    margin-left: 8px;
+}
+
+.states_from {
+    justify-self: center;
+    width: 98%;
+    margin-top: 35px;
+}
+
+.states {
+    display: inline-block;
+    justify-self: center;
+    width: 95%;
+}
+label {
+    display: block;
+    margin-right: 20px; /* Расстояние между радиокнопками */
+}
+/* Основные стили для радио-кнопок */
+input[type="radio"] {
+    align-self: center;
+    appearance: none; /* Убираем стандартный стиль */
+    -webkit-appearance: none; /* Для Safari */
+    -moz-appearance: none; /* Для Firefox */
+    width: 15px; /* Ширина кнопки */
+    height: 15px; /* Высота кнопки */
+    min-width: 15px; /* Минимальная ширина кнопки */
+    min-height: 15px; /* Минимальная высота кнопки */
+    max-width: 15px; /* Максимальная ширина кнопки */
+    max-height: 15px;
+    border: 2px solid #003960; /* Цвет рамки */
+    border-radius: 50%; /* Скругление углов */
+    outline: none; /* Убираем обводку */
+}
+
+/* Стили для кнопки в отмеченном состоянии */
+input[type="radio"]:checked {
+    background-color: #003960; /* Цвет фона */
+}
+
+/* Если нужно добавить кастомный стиль самому input */
+input[type="radio"] + label {
+    font-size: 18px;
+    color: #003960; /* Цвет текста */
+    margin-left: 5px; /* Отступ слева */
+}
+
+/* Стили при наведении */
+input[type="radio"]:hover {
+    border-color: #76c8ff; /* Цвет рамки при наведении */
+}
+
+.name {
+    justify-self: center;
+    width: 98%;
+    height: 15%;
+    margin-top: 35px;
+}
+.number {
+    justify-self: center;
+    width: 98%;
+    height: 15%;
+    margin-top: 35px;
+}
+#result {
+    margin-top: 20px; /* добавляем верхний отступ */
+    color: #003960;
+    font-size: 24px;
+    margin: 0;
+    margin-left: 15px;
+    padding: 0;
+}
+.slide_five .summa {
+    display: flex;
+    justify-self: center;
+    margin-top: 35px;
+}
+.slide_five .otput_email {
+    margin: 50px;
+}
+.slide_five .sending_by_mail {
+    width: 50%;
+    height: 60px;
+    justify-self: center;
+    font-size: 24px;
+    border-radius: 15px;
+    border: 2px solid #003960;
+}
+.slide_five button[type="button"]:checked {
+    background-color: #003960; /* Цвет фона */
+}
+.slide_five button[type="button"]:hover {
+    background-color: #B48246; /* Цвет рамки при наведении */
+}
+@media  (max-width: 1070px){
+    .calculator {
+        width: 75%;
+    }
+    .slide_five .sending_by_mail {
+        width: 75%;
+    }
+
+}
+@media  (max-width: 600px){
+    .calculator {
+        width: 90%;
+    }
+    .slide_five .sending_by_mail {
+        width: 90%;
+    }
+
+}

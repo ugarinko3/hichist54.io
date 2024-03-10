@@ -1,20 +1,18 @@
 .all {
-	height: 327px;
-	width: 350px;
-	margin-left: 200px;
+	display: block;
+
 }
-#slider { /*положение слайдера*/
-    position: relative;
-	text-align: center;
-	width: 260px;
-	height: 327px;
-	background-color: #B48246;
-	border-radius: 15px;
-    top: 10px;
-}
+
 
 #slider{ /*центровка слайдера*/
 	margin: 0 auto;
+	display: grid;
+	grid-auto-flow: row;
+}
+.slider_flex {
+	display: grid;
+	grid-auto-rows: auto;
+	height: 100%;
 }
 
 #slides article{ /*все изображения справа друг от доруга*/
@@ -53,23 +51,19 @@ article img{ /*размер изображений слайдера*/
 	margin-left: -100%;
 }
 
-#controls{ /*положение блока всех управляющих элементов*/
-	margin: -25% 0 0 0;
-	width: 100%;
-	height: 10px;
-}
-
 #active label{ /*стиль отдельного переключателя*/
 	border-radius: 10px; /*скругление углов*/
 	display: inline-block; /*расположение в строку*/
 	width: 15px;
 	height: 15px;
+	margin: 0 0;
 	background: #bbb;
 }
 
 #active{ /*расположение блока с переключателями*/
-	margin: 23% 0 0;
+	margin: 0 0;
 	text-align: center;
+	align-self: center;
 }
 
 #active label:hover{ /*поведение чекбокса при наведении*/
@@ -86,12 +80,4 @@ article img{ /*размер изображений слайдера*/
 
 #slides .image{ /*анимация пролистывания изображений*/
 	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
-}
-
-#controls label:hover{ /*прозрачность стрелок при наведении*/
-	opacity: 0.6;
-}
-
-#controls label{ /*прозрачность стрелок при отводе курсора*/
-	transition: opacity 0.2s ease-out;
 }

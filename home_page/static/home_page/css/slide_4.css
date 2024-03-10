@@ -1,36 +1,135 @@
 .slide_four {
-    width: 100%;
-    height: 1200px;
-    background-color: #fff;
+  display: grid;
+  grid-auto-flow: row;
+  background-color: antiquewhite;
 }
-.slide_four .fon_slide_four {
-    background: url(../img/fon_carpet.png);
-    height: 1200px;
-    background-position: 100% bottom;
-    background-repeat: no-repeat;
-}
-.slide_four .class_slide_four {
-    display: block;
-    width: 100%;
-    height: 700px;
 
+.slide_four .four {
+  display: flex;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+  margin-top: 50px;
+  border-spacing: 0;
 }
-.slide_four .name_class_four {
-    text-align: center;
-    display: block;
-    width: 100%;
-    height: 100px;
+.four:nth-child(n) {
+  justify-content: center
 }
-.slide_four .name_class_four p {
-    text-align: center;
-    display: block;
-    font-size: 28px; /* Размер шрифта */
+.slide_four .image {
+  display: block;
+  height: 220px;
+  width:  220px;
+}
+.slide_four .four .four_text { /* Правая ячейка */ 
+  display: block;
+  justify-self: center;
+  align-self: center;
+  margin-left: 10px;
+  text-align: left; /* Выравнивание по правому краю */
+  width: 60%;
+}
+.slide_four .img {
+  height: 200px;
+  width: 100%;
+  border: 3px solid #003960;
+  border-radius: 15px;
+}
+#img_one {
+  background: url("../img/icon_info/shag-1.png");
+  background-size: 100% 100%;
+  margin: 3px 3px;
+}
+#img_two {
+  background: url("../img/icon_info/shag-2.png");
+  background-size: 100% 100%;
+  background-position-y: 10px;
+  margin: 3px 3px;
+}
+#img_three {
+  background: url("../img/icon_info/shag-3.png");
+  background-size: 100% 100%;
+  margin: 3px 3px;
+}
+#img_four {
+  background: url("../img/icon_info/shag-4.png");
+  background-size: 100% 100%;
+  margin: 3px 3px;
+}
+#img_five {
+  background: url("../img/icon_info/shag-5.png");
+  background-size: 100% 100%;
+  margin: 3px 3px;
+}
+#img_six {
+  background: url("../img/icon_info/shag-6.png");
+  background-size: 100% 100%;
+  margin: 3px 3px;
+}
+
+.slide_four .title_four {
+    color: #003960;
+    font-size: 24px; /* Размер шрифта */
     font-weight: bold; /* Жирный шрифт */
-    color: #B48246;
 }
-.slide_four .services {
+.slide_four .text_four {
+    color: #003960;
+    font-size: 20px;
+}
+@media  (max-width: 350px){
+  .slide_four .text_four {
+    display: none;
+  }
+}
+@media  (max-width: 1070px){
+  .slide_four .image {
     display: block;
-    margin-left: 10%;
-    width: 100%;
-    height: 300;
-} 
+    text-align: right;
+    width:  70px; /* Ширина */
+  }
+  .slide_four .four .four_text { /* Правая ячейка */ 
+    display: block;
+    justify-self: start;
+    align-self: start;
+    margin-left: 10px;
+    text-align: left; /* Выравнивание по правому краю */
+    width: 60%;
+  }
+  .slide_four .img {
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    border: 3px solid #003960;
+    border-radius: 15px;
+  }
+  #img_one {
+    background: url("../img/icon_info/50x50/shag-1.png");
+    background-size: 100% 100%;
+    margin: 3px 3px;
+  }
+  #img_two {
+    background: url("../img/icon_info/50x50/shag-2.png");
+    background-size: 100% 100%;
+    background-position-y: 5px;
+    margin: 3px 3px;
+  }
+  #img_three {
+    background: url("../img/icon_info/50x50/shag-3.png");
+    background-size: 100% 100%;
+    margin: 3px 3px;
+  }
+  #img_four {
+    background: url("../img/icon_info/50x50/shag-4.png");
+    background-size: 100% 100%;
+    margin: 3px 3px;
+  }
+  #img_five {
+    background: url("../img/icon_info/50x50/shag-5.png");
+    background-size: 100% 100%;
+    margin: 3px 3px;
+  }
+  #img_six {
+    background: url("../img/icon_info/50x50/shag-6.png");
+    background-size: 100% 100%;
+    margin: 3px 3px;
+  }
+}

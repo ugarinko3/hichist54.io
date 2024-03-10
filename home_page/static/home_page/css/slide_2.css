@@ -1,53 +1,85 @@
 .slide_two {
-  background-color: white;
-  display: block;
-  width: 100%;
-  height: 400px;
-}
-.slide_two .name_class_two {
-    display: block;
+    display: grid;
+    grid-auto-flow: row;
+    margin-top: 70px;
     width: 100%;
-    height: 60px;
-    margin-top: 6%;
-}
-.slide_two .jobs {
-    display: block;
-    text-align: center;
-    font-size: 24px; /* Размер шрифта */
-    font-weight: bold; /* Жирный шрифт */
-    color: #B48246;
-}
+  }
 .slide_two .jobs_prime{
+    display: block;
     margin-top: -15px;
     text-align: center;
     font-size: 16px; /* Размер шрифта */
     color: #868789;
 }
 .slide_two .prime_in_company {
-    display: inline-block;
-    margin-top: 5%;
+    display: grid;
     color:#d9dadb;
-    height: 400px;
+    margin-top: 50px;
 }
 .icons .table {
-    display: inline-block;
-    margin-left: 140px;
-    width: 320px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    justify-self: center;
 }
 .icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
-    height: 100%;
 }
+.slide_two .prime_in_company590 > div{ display: none; }
+
+@media  (max-width: 1190px){
+    .icons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+
 .icons .row {
-    width: 100%;
+    display: flex;
+    justify-self: center;
     height: 100%;
 }
 
+.icons .icon_cell {
+    width: 50px;
+    height: 40px;
+}
+
+.icons .title_cell {
+    width: 250px;
+    height: 40px;
+    text-align: left;
+}
+
+.icons .triangle_cell {
+    width: 50px;
+    height: 70px;
+}
+
+.icons .text_cell {
+    width: 240px;
+    height: 150px;
+    text-align: left;
+}
+.icons .icon img {
+    margin-left: -5px;
+}
 .icons .title {
+    margin-top: 7px;
+    padding: 0;
     font-size: 18px;
     color: #4682B4;
 }
 .icons .item_desc {
+    margin: 0;
+    padding: 0;
     color: #868789;
 }
 
@@ -57,70 +89,98 @@
     border-radius: 10px;
     padding: 20px;
     position: relative;
-    color: #fff;
     margin-top: 1px;
 }
 .triangle::after {
     content: ''; 
-    position: absolute;
-    left: 20px; bottom: -20px;
+    display: block;
+    margin-top: -2px;
+    margin-left: -10px;
     border: 10px solid transparent;
     border: 20px solid transparent;
     border-top: 20px solid #868789;
     border-right: 20px solid #868789; 
 }
 
-
-
-
-
-
-
-
-
-/* <div class="slide_left">
-                <div class="logo logo_text">
-                    <div class="logo">
-                        <img class="logo_company" src="{% static 'home_page/img/logo/logo.png' %}" style="width: 120px; height: 120px;">
-                    </div>
-                    <div class="logo_text">
-                        <h2 class="title_in_company">Фабрика стирки ковров</h2>
-                    </div>   
-                </div>
-                <div class="word" >
-                    <p>Надежный партнер по Новосибирску чистоты и уюта в вашем доме! Мы - это не просто компания, мы - фабрика качественной чистки ковров, в которой каждая нить и каждое волокно вашего ковра обрабатывается с любовью и заботой.</p>
-                </div>
-            </div>
-            <div class="slide_right">
-                <div class="telephone_slide">
-                    <div class="info_number_icon info_number_phone">
-                        <div class="info_number_icon">
-                            <img class="logo_phone" src="{% static 'home_page/img/icon_slade/Layer_13.png' %}" style="width: 60px; height: 60px;">
-                        </div>
-                        <div class="info_number_phone">
-                            <a class="text_number">+7 (913) 737-82-83</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="time">
-                    <div class="info_time info_time_text">
-                        <div class="info_time">
-                            <img class="logo_time" src="{% static 'home_page/img/icon_slade/8yo_hours.png' %}" style="width: 60px; height: 60px;">
-                        </div>
-                        <div class="info_time_text">
-                            <p class="text_time">09:00 - 21:00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="location">
-                    <div class="info_location info_location_text">
-                        <div class="info_location">
-                            <img class="logo_location" src="{% static 'home_page/img/icon_slade/education_location.png' %}" style="width: 55px; height: 70px;">
-                        </div>
-                        <div class="info_location_text">
-                            <p class="location_text">г.Новосибирск, ул.Обская 50</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> */
+@media  (max-width: 590px){
+    .slide_two .prime_in_company > .icons {
+        display: none;
+    }
+    .slide_two .prime_in_company590 > div {
+        display: block;
+    }
+    .in_company {
+        display: grid;
+        grid-auto-flow: row;
+        width: 100%;
+        height: 180px;
+        background-color: #fff;
+    }
+    .msg-container {
+        width: 300px;
+        height: 180px;
+        margin: auto;
+        overflow: hidden;
+    }
+    .slider_class_590 {
+        display: inline-flex;
+        transition: 0.5s;
+        height: 180px;
+    }
+    .msg-column {
+        width: 300px;
+        height: 120px;
+        align-self: center;
+        text-align: center;
+    }
+    .msg-column h1{
+        color: #4682B4;
+        font-size: 24px;
+        font-weight: 100px;
+        align-self: center;
+        margin-left: 5px;
+    }
+    .msg-column p{
+        color: #868790;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .controller {
+        display: grid;
+        grid-auto-flow: column;
+        width: 300px;
+        height: 1px;
+        background: #c0c0c0;
+        margin: auto;
+        
+    }
+    .line1, .line2, .line3, .line4 {
+        display: inline-block;
+        height: 10px;
+        width: 75px;
+        margin-top: -5px;
+        cursor: pointer;
+    }
+    .active {
+        width: 75px;
+        height: 10px;
+        border-radius: 10px;
+        background: #B48246;
+        position: absolute;
+        top: -4px;
+        transition: 0.5s;
+    }
+    .img_h1 {
+        display: inline-flex;
+    }
+    .icon{
+        align-self: center;
+    }
+    .controller_position {
+        position: absolute;
+        width: 100%;
+    }
+    .msg-position {
+        width: 100%;
+    }
+}
