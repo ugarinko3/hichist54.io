@@ -11,7 +11,7 @@
     justify-self: center;
     grid-auto-rows: auto;
     color: white;
-    border: 2px solid #B48246;
+    border: 2px solid #003960;
     border-radius: 30px;
     text-align: center;
 }
@@ -99,7 +99,7 @@ label {
     margin-right: 20px; /* Расстояние между радиокнопками */
 }
 /* Основные стили для радио-кнопок */
-input[type="radio"] {
+.slide_five input[type="radio"] {
     align-self: center;
     appearance: none; /* Убираем стандартный стиль */
     -webkit-appearance: none; /* Для Safari */
@@ -116,7 +116,7 @@ input[type="radio"] {
 }
 
 /* Стили для кнопки в отмеченном состоянии */
-input[type="radio"]:checked {
+.slide_five input[type="radio"]:checked {
     background-color: #003960; /* Цвет фона */
 }
 
@@ -170,9 +170,6 @@ input[type="radio"]:hover {
 }
 .slide_five button[type="button"]:checked {
     background-color: #003960; /* Цвет фона */
-}
-.slide_five button[type="button"]:hover {
-    background-color: #B48246; /* Цвет рамки при наведении */
 }
 @media  (max-width: 1070px){
     .calculator {

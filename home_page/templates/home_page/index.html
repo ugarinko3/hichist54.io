@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="{% static 'home_page/css/slide_4.css' %}">
     <link rel="stylesheet" href="{% static 'home_page/css/slide_5.css' %}">
     <link rel="stylesheet" href="{% static 'home_page/css/slide_6.css' %}">
+    <link rel="stylesheet" href="{% static 'home_page/css/slide_7.css' %}">
+    <link rel="stylesheet" href="{% static 'home_page/css/slide_8.css' %}">
+    <link rel="stylesheet" href="{% static 'home_page/css/slide_discount.css' %}">
     <link rel="stylesheet" href="{% static 'home_page/css/slider/slider.css' %}">
     <link rel="stylesheet" href="{% static 'home_page/css/slider/slider2.css' %}">
     <link rel="stylesheet" href="{% static 'home_page/css/slider/slider3.css' %}">
@@ -27,13 +30,11 @@
             var typeManufacturing = parseFloat(document.getElementById("type_manufacturing").value); // Получаем выбранный тип изготовления
             var typeDesign = parseFloat(document.getElementById("type_design").value); // Получаем выбранный тип материала
             var state = parseFloat(document.querySelector('input[name="state"]:checked').value); // Получаем выбранное состояние ковра
-        
             if (isNaN(length) || isNaN(width) || typeManufacturing === 0 || typeDesign === 0 || isNaN(state)) {
                 // Если какое-то из значений не было выбрано, прерываем выполнение функции
                 return;
             }
-        
-            var area = length * width; // Вычисляем площадь ковра
+                    var area = length * width; // Вычисляем площадь ковра
             var totalPrice = ((area * typeDesign) + typeManufacturing) * state ; // Вычисляем общую стоимость
         
             // Выводим результат на страницу
@@ -45,14 +46,79 @@
 </head>
 <body class="">
     <div class="menu">
-        <div class="leftside">
-            <div class="leftcontainer">
-                <div class="left_logo t-title" field="title" style="color:#141414;font-weight:500;">Химчист</div>
+        <header class="header">
+            <div class="conteiner">
+                <div class="header_body">
+                    <a href="#" class="header_logo">
+                        <img src="../../static/home_page/img/logo/boshka.png">
+                    </a>
+                    <div class="header_burger">
+                        <span></span>
+                    </div>
+                    <nav class="header_menu">
+                        <ul class="header_list">
+                            <li>
+                                <button class="header_link" onclick="scrollToDivOne()" type="button"  id="button">Главная</button>
+                            </li>
+                            <li>
+                                <button class="header_link" onclick="scrollToDivTwo()" type="button"  id="button">Услуги</button>
+                            </li>
+                            <li>
+                                <button class="header_link" onclick="scrollToDivThree()" type="button"  id="button">Калькулятор</button>
+                            </li>
+                            <li>
+                                <button class="header_link" onclick="scrollToDivFour()" type="button"  id="button">Этапы</button>
+                            </li>
+                            <li>
+                                <button class="header_link" onclick="scrollToDivFive()" type="button"  id="button">Скидки</button>
+                            </li>
+                            <li>
+                                <div class="info_eight">
+                                    <div class="info_slide">
+                                        <div class="icon_info">
+                                            <img class="logo_icon" src="../../static/home_page/img/icon_slade/phone.png">
+                                        </div>
+                                        <div class="text_slide">
+                                            <span><a href="tel: +79137378283">+7 (913) 737-82-83</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="info_slide">
+                                        <div class="icon_info">
+                                            <img class="logo_icon" src="../../static/home_page/img/icon_slade/location.png">
+                                        </div>
+                                        <div class="text_slide">
+                                            <p>г.Новосибирск, ул. Грибоедова, 2Б</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon_conection">
+                                    <div class="vk">
+                                        <p><a href="https://vk.com/hichist"><img  class="vk-icon" src="../../static/home_page/img/icon_slade/vk.png" width="30px" height="30px" border-radius="50"></a></p>
+                                    </div>
+                                    <div class="whatsapp">
+                                        <p><a href=" https://api.whatsapp.com/send?phone=79137378283"><img  class="whatsapp-icon" src="../../static/home_page/img/icon_slade/whatsapp.png" width="30px" height="30px" border-radius="50"></a></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="button_menu">
+                                    <button class="button" type="button"  id="button">Оформить заявку</button>
+                                </div>
+                            </li>
+                            <script src="../../static/home_page/js/menu_button.js"></script>
+                        </ul>
+                    </nav>
+                    <div class="button_menu">
+                        <button class="button" type="button"  id="button">Оформить заявку</button>
+                    </div>
+                </div>
             </div>
-        </div>
+        </header>
     </div>
-    <div class="slide_one">
-       <div class="conteiner_one">
+    <div class="slide_one" id="slide_one">
+        <div class="conteiner_one">
             <div class="switch_slide_one">
                 <input checked type="radio" name="slider_slide_one" id="one">
                 <input type="radio" name="slider_slide_one" id="two">
@@ -75,19 +141,33 @@
                     <div class="box">
                         <div class="box_one">
                             <h1>Стирка ковров</h1>
-                            <p>от 280руб/кв.м</p>
-                            <button class="buttom_one" type="button"  id="buttom_one">Оформить заявку</button>
+                            <p>от <span class="colortext">250</span> руб/кв.м</p>
+                            <button class="buttom_one" onclick="scrollToDiv()" type="button"  id="buttom_one">Оформить заявку</button>
                         </div>
                     </div>
                     <div class="box">
-                        <h1>Пока</h1>
+                        <div class="box_two">
+                            <h1>Доставка</h1>
+                            <p>Наша транспортная служба в удобное вам <span class="colortext">время</span> бесплатно заберет ковер</p>
+                            <button class="buttom_one" onclick="scrollToDiv()" type="button"  id="buttom_one">Оформить заявку</button>
+                        </div>
                     </div>
                     <div class="box">
-                        <h1>Покfffffа</h1>
+                        <div class="box_three">
+                            <h1>Калькулятор</h1>
+                            <p>Расчитайте <span class="colortext">ценну</span> заранее</p>
+                            <button class="buttom_one" onclick="scrollToDiv()" type="button"  id="buttom_one">Подробнее</button>
+                            <script>
+                                function scrollToDiv() {
+                                    var targetDiv = document.getElementById('slide_five');
+                                    targetDiv.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            </script>
+                        </div>
                     </div>
                 </div>
             </div>
-       </div>
+        </div>
     </div>
     <div class="slide_two">
         <div class="name_class">
@@ -331,7 +411,7 @@
             </div>
         </div>
     </div>
-    <div class="slide_four">
+    <div class="slide_four" id="slide_four">
         <div class="name_class">
             <p class="name_text">МЫ ЗНАЕМ, КАК ЭФФЕКТИВНО СТИРАТЬ КОВРЫ</p>
         </div>
@@ -340,7 +420,7 @@
         </div>
         <div class="four">
             <div class="image">
-                 <div class="img" id="img_one"></div>
+                <div class="img" id="img_one"></div>
             </div>
             <div class="four_text" >
                 <div class="title_four">Осмотр ковра и подбор чистящих средств</div>
@@ -394,6 +474,51 @@
         </div>
         <div class="space"></div>
     </div>
+    <div class="slide_discount" id="slide_discount">
+        <div class="name_class">
+            <p class="name_text">Специальные предложения</p>
+        </div>
+        <div class="line">
+            <span></span>
+        </div>
+        <div class="space"></div>
+        <div class="slide_discount_info">
+            <div class="slide-dis">
+                <div class="slide">
+                    <div class="text-dis">
+                        <div class="text_title">
+                            <p>Льготные цены для пенсионеров</p>
+                        </div>
+                        <div class="info_text">
+                            <p><span class="sizetext">200₽</span> за квадратный метр на стирку любого вида ковра, любой сложности загрязнения</p>
+                        </div>
+                        <div class="button-slide">
+                            <button class="buttom" type="button"  id="button-slide">Оформить заявку</button>
+                        </div>
+                    </div>
+                    <div class="image_discount">
+                        <img class="img-dis" src="../../static/home_page/img/discount_image/image_1.jpg">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="text-dis">
+                        <div class="text_title">
+                            <p>Льготные цены для многодетных семей</p>
+                        </div>
+                        <div class="info_text">
+                            <p><span class="sizetext">200₽</span> за квадратный метр на стирку любого вида ковра, любой сложности загрязнения</p>
+                        </div>
+                        <div class="button-slide">
+                            <button class="button" type="button"  id="button-slide">Оформить заявку</button>
+                        </div>
+                    </div>
+                    <div class="image_discount">
+                        <img class="img-dis" src="../../static/home_page/img/discount_image/image_2.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="slide_text">
         <div class="slide">
             <div class="name_class">
@@ -408,7 +533,7 @@
             <div class="space"></div>
         </div>
     </div>
-    <div class="slide_five">
+    <div class="slide_five" id ="slide_five">
         <div class="calculator">
             <div class="name_class">
                 <p class="name_text">КАЛЬКУЛЯТОР</p>
@@ -459,16 +584,16 @@
                 </div>
                 <form class ="states">
                     <label class="label_flex">
-                      <input type="radio" name="state" value="1" id="state_flex" onchange="calc()">
-                      <p class="text_label">Сухой ковёр без биологических загрязнений</p>
+                    <input type="radio" name="state" value="1" id="state_flex" onchange="calc()">
+                    <p class="text_label">Сухой ковёр без биологических загрязнений</p>
                     </label>
                     <label class="label_flex">
-                      <input type="radio" name="state" value="1.5" id="state_flex" onchange="calc()">
-                      <p class="text_label">Ковёр во влажном состоянии или после пожара</p>
+                    <input type="radio" name="state" value="1.5" id="state_flex" onchange="calc()">
+                    <p class="text_label">Ковёр во влажном состоянии или после пожара</p>
                     </label>
                     <label class="label_flex">
-                      <input type="radio" name="state" value="1.5" id="state_flex" onchange="calc()">
-                      <p class="text_label">Есть биологические загрязнения (моча, рвота и т.д.)</p>
+                    <input type="radio" name="state" value="1.5" id="state_flex" onchange="calc()">
+                    <p class="text_label">Есть биологические загрязнения (моча, рвота и т.д.)</p>
                     </label>
                 </form>
             </div>
@@ -496,7 +621,7 @@
             </div>
         </div>
     </div>
-    <div class="slide_six">
+    <div class="slide_six" id="slide_six">
         <div class="price_carpet">
             <div class="name_class">
                 <p class="name_text">СТОИМОСТЬ УСЛУГ</p>
@@ -611,6 +736,141 @@
         </div>
         <div class="space"></div>
     </div>
+    <div class="slide_seven">
+        <div class="name_class">
+            <p class="name_text">ОТВЕЧАЕМ НА ВОПРОСЫ</p>
+        </div>
+        <div class="line">
+            <span></span>
+        </div>
+        <div class="space"></div>
+        <div class="faq">
+            <div class="faq-item">
+                <input class="faq-input" type="checkbox" id="faq_1">
+                <label class="faq-title" for="faq_1">Как часто следует стирать ковры?</label>
+                <div class="faq-text">
+                    <p>Обычно рекомендуется стирать ковры раз в год или по мере необходимости. Если ковры подвергаются интенсивному использованию или на них часто попадают пятна, то чистку можно проводить чаще.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <input class="faq-input" type="checkbox" id="faq_2">
+                <label class="faq-title" for="faq_2">Постирать на фабрике можно любой ковер?</label>
+                <div class="faq-text">
+                    <p>Мы принимаем в работу любые ковры, но стираем только те, которым не противопоказано обильное смачивание. Это синтетические, полусинтетические и фабричные шерстяные ковры. Ковровые изделия, требующие деликатного ухода (шелковые, вискозные, хлопчатобумажные, ручной работы, ветхие), а также покрытия на клееной основе не подлежат стирке и чистятся сухим способом с применением органических растворителей. Какая именно технология подойдет вашему ковру, определит технолог после его приемки и осмотра</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <input class="faq-input" type="checkbox" id="faq_3">
+                <label class="faq-title" for="faq_3">Когда я узнаю точную стоимость стирки моего ковра?</label>
+                <div class="faq-text">
+                    <p>Точная стоимость определяется технологом при приемке и осмотре изделия. Наш менеджер свяжется с вами, чтобы озвучить итоговую сумму заказа и согласовать его выполнение. Обратите внимание: сотрудник транспортной службы, забирая ковер, никакой информации о ценах не предоставляет!</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <input class="faq-input" type="checkbox" id="faq_4">
+                <label class="faq-title" for="faq_4">Мне нужно как-то подготовить ковёр?</label>
+                <div class="faq-text">
+                    <p>Да, к моменту приезда нашего сотрудника ковер необходимо свернуть в рулон (закреплять скотчем или чем-то другим необязательно) и поставить или положить недалеко от входной двери. Если ковёр необходимо вытащить из-под мебели, снять со стены, то об этом необходимо предупредить заранее. Данная услуга платная.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <input class="faq-input" type="checkbox" id="faq_5">
+                <label class="faq-title" for="faq_5">Каким образом происходит оплата услуги?</label>
+                <div class="faq-text">
+                    <p>Оплата услуги производится при получении готового изделия курьеру.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <input class="faq-input" type="checkbox" id="faq_6">
+                <label class="faq-title" for="faq_6">Что если меня не устроит качество стирки?</label>
+                <div class="faq-text">
+                    <p>Мы всегда прикладываем максимум усилий, чтобы каждый наш заказчик остался доволен. Если Вы обнаружите недостатки в работе, то необходимо сообщить об этом администратору в течении 2 рабочих дней и мы постараемся устранить их, если это возможно.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <input class="faq-input" type="checkbox" id="faq_7">
+                <label class="faq-title" for="faq_7">Вы выезжаете в районы?</label>
+                <div class="faq-text">
+                    <p>Основной город в котором мы работаем - Новосибирск. Мы так же осуществляем выезд в близлежащие районы. Стоимость выезда в ваш район и график необходимо уточнить у администратора.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="space"></div>
+    <div class="slide_eight">
+        <div class="name_class">
+            <p class="name_text">Адрес и контакты фабрики</p>
+        </div>
+        <div class="line">
+            <span></span>
+        </div>
+        <div class="space"></div>
+        <div class="eight">
+            <div class="info_slide_eight">
+                <div class="space"></div>
+                <div class="logo_text">
+                    <div class="logo">
+                        <img class="logo_boshka" src="../../static/home_page/img/logo/boshka.png">
+                    </div>
+                    <div class="title_text">Химчист</div>
+                </div>
+                <p class="title_info">Фабрика стирки ковров в Новосибирске</p>
+                <div class="info_eight">
+                    <div class="info_slide">
+                        <div class="icon_info">
+                            <img class="logo_icon" src="../../static/home_page/img/icon_slade/phone.png">
+                        </div>
+                        <div class="text_slide">
+                            <span><a href="tel: +79137378283">+7 (913) 737-82-83</a></span>
+                        </div>
+                    </div>
+                    <div class="info_slide">
+                        <div class="icon_info">
+                            <img class="logo_icon" src="../../static/home_page/img/icon_slade/mail.png">
+                        </div>
+                        <div class="text_slide">
+                            <p>hichist.fabrika@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info_slide">
+                        <div class="icon_info">
+                            <img class="logo_icon" src="../../static/home_page/img/icon_slade/location.png">
+                        </div>
+                        <div class="text_slide">
+                            <p>г.Новосибирск, ул. Грибоедова, 2Б</p>
+                        </div>
+                    </div>
+                    <div class="info_slide">
+                        <div class="icon_info">
+                            <img class="logo_icon" src="../../static/home_page/img/icon_slade/clock.png">
+                        </div>
+                        <div class="text_slide">
+                            <p>График работы: 9:00 - 20:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon_conection">
+                    <div class="vk">
+                        <p><a href="https://vk.com/hichist"><img  class="vk-icon" src="../../static/home_page/img/icon_slade/vk.png" width="30px" height="30px" border-radius="50"></a></p>
+                    </div>
+                    <div class="whatsapp">
+                        <p><a href=" https://api.whatsapp.com/send?phone=79137378283"><img  class="whatsapp-icon" src="../../static/home_page/img/icon_slade/whatsapp.png" width="30px" height="30px" border-radius="50"></a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="map_class">
+                <div class="map" id="map"></div>
+                <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU">
+                </script>
+                <script src="../../static/home_page/js/map.js"></script>
+            </div>
+        </div>
+    </div>
+    <div class="text_reklama">
+        <p class="text">Made on <a href="https://t.me/ugarinko">@ugarinko</a></p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="../../static/home_page/js/menu.js"></script>
 </body>
 </html>
 

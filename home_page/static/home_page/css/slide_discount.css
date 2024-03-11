@@ -1,0 +1,80 @@
+.image_discount {
+    width: 100%;
+    overflow: hidden;
+}
+.img-dis {
+    width: 100%;
+    height: 100%;
+}
+.slide_discount .slide-dis {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    gap:10px;
+    margin: auto;
+}
+.slide_discount .slide {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    border: 2px solid #555;
+    border-radius: 20px;
+    grid-template-columns: 55% 45%;
+    margin: 15px 15px 50px 15px;
+    overflow: hidden;
+    justify-self: center;
+    background: #fcfcfc;
+}
+.slide_discount_info {
+    width: 100%;
+}
+.text-dis {
+    padding: 15px 15px;
+}
+.slide_discount .button-slide {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+.slide_discount button {
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    border: 2px solid #003960;
+    transition: background .4s ease-out;
+    color: #003960;
+    font-size: 14px;
+    font-weight: bold;
+}
+.slide_discount button:hover {
+    background-color: #003960;
+    color: #fff;
+    border-radius: 20px;
+}
+.text_title p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #003960;
+}
+.info_text p {
+    font-size: 18px;
+}
+.sizetext {
+    font-weight: bold;
+}
+@media  (max-width: 1200px){
+    .slide_discount .slide-dis {
+        grid-template-columns: repeat(1, 2fr);
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+}
+@media  (max-width: 750px){
+    .slide_discount .slide {
+        grid-template-columns: repeat(1, 2fr);
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+}

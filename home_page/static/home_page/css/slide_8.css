@@ -1,0 +1,122 @@
+.slide_eight {
+    width: 100%;
+}
+.eight {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 40% 60%;
+}
+.map_class {
+    height: 450px;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+.info_slide_eight {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    height: 450px;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+.map {
+    height: 400px;
+    width: 700px;
+    background: #555;
+    margin: auto;
+    margin-top: 35px;
+}
+.logo_text {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 44px ;
+    width: 25%;
+    margin: auto;
+}
+.logo {
+    width: 44px;
+    height: 44px;
+}
+.logo_boshka {
+    width: 44px;
+    height: 44.4671px;
+}
+.title_text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+.text_info_eight {
+    width: 70%;
+    margin: auto;
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+.logo_icon {
+    width: 30px;
+    height: 30px;
+}
+.icon_info {
+    width: 32px;
+    height: 32px;
+}
+.text_slide {
+    width: 350px;
+    height: 32px;
+    font-size: 18px;
+}
+.info_slide {
+    display: grid;
+    grid-auto-flow: column;
+    margin: 25px;
+    grid-template-columns: 35px 350px;
+}
+.slide_eight .info_eight {
+    width: 50%;
+    margin-left: 28%;
+}
+.title_info {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+.vk {
+    margin: auto;
+}
+.icon_conection  p{
+    width: 34px;
+    height: 34px;
+    margin: auto;
+}
+.icon_conection {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 40px 40px;
+    justify-content: center;
+}
+@media  (max-width: 1200px){
+    .map {
+        width: 350px;
+    }
+    .eight {
+        grid-template-columns: 60% 40%;
+    }
+    
+}
+@media  (max-width: 940px){
+    .map {
+        margin: auto;
+        margin-top: 25px;
+        width: 97%;
+    }
+    .eight {
+        grid-auto-flow: row;
+        grid-template-columns: auto;
+    }
+    .info_slide_eight {
+        grid-row-start: 2;
+    }
+
+}

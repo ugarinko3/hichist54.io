@@ -1,0 +1,100 @@
+.slide_seven {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0 0 5px;
+}
+
+
+/* Faq */
+
+.faq {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border: 1px solid #003960;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.faq-title {
+    width: 100%;
+    display: block;
+    padding: 10px 15px;
+    position: relative;
+    cursor: pointer;
+    transition: background .2s ease-out;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #003960;
+}
+
+.faq-title:after {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #fff transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+.faq-title:hover {
+    background-color: #003960;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.faq-input {
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.faq-input:checked ~ .faq-title {
+    background-color: #003960;
+    color: #fff;
+    border-radius: 15px 15px 0 0;
+    font-weight: bold;
+}
+
+
+.faq-input:checked ~ .faq-title:after {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent #fff transparent;
+    transition: 1s;
+}
+
+.faq-input:checked ~ .faq-text {
+    display: block;
+}
+
+.faq-text {
+    display: none;
+    padding: 10px 15px;
+    color: #003960;
+    font-size: 18px;
+    font-weight:bolder;
+}
+
+
+
+

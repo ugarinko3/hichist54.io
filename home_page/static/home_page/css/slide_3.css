@@ -8,7 +8,7 @@
 #slider3 { /*положение слайдера*/
     position: relative;
 	text-align: center;
-	background-color: #B48246;
+	background-color: #003960;
 	border-radius: 15px;
     width: 410px;
     height: 330px;
@@ -18,7 +18,7 @@
 #slider2 { /*положение слайдера*/
     position: relative;
 	text-align: center;
-	background-color: #8B4513;
+	background-color: #003960;
 	border-radius: 15px;
     width: 410px;
     height: 330px;
@@ -28,7 +28,7 @@
 #slider { /*положение слайдера*/
     position: relative;
 	text-align: center;
-	background-color: #B48246;
+	background-color: #003960;
 	border-radius: 15px;
     width: 410px;
     height: 330px;
@@ -75,20 +75,17 @@
         grid-template-columns: repeat(1, 3fr);
         justify-content: space-between;
     }
-
-}
-@media  (max-width: 1290px){
     .slide_three .img {
-        width: 300px;
+        width: 98%;
     }
     #slider3 { /*положение слайдера*/
-        width: 310px;
+        width: 91%;
     }
     #slider2 { /*положение слайдера*/
-        width: 310px;
+        width: 91%;
     }
     #slider { /*положение слайдера*/
-        width: 310px;
+        width: 91%;
     }
 
 }
