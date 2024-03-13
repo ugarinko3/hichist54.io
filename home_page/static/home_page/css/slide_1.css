@@ -94,13 +94,6 @@ article img{ /*размер изображений слайдера*/
   border-radius: 20px;
   z-index: 110;
 }
-.colortext {
-  font-size: 22px;
-  font-weight: bold;
-  color: rgb(151, 2, 2);
-  opacity: 1;
-  transition: opacity .4s ease-out;
-}
 .wrapper .box_one {
   width: 300px;
   border-radius: 20px;

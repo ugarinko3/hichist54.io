@@ -80,6 +80,7 @@ body {
   font-size: 18px;
   text-decoration: none;
   font-weight: bold;
+  cursor: pointer;
 }
 .header_list .icon_conection, .header_list .info_eight, .header_list .button_menu{
   display: none;

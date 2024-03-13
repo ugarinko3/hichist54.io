@@ -56,6 +56,13 @@
     position: relative;
     top: 15px;
 }
+.colortext {
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(151, 2, 2);
+    opacity: 1;
+    transition: opacity .4s ease-out;
+  }
 @media  (max-width: 1000px){
     .class_text{
         margin: 50px 30px 0 30px;

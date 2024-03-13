@@ -1,0 +1,43 @@
+.slide_pesonal_information {
+    margin-top: 80px;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    z-index: 1;
+}
+.information_personal {
+    position: relative;
+    max-width: 1000px;
+    padding: 45px;
+    z-index: 2;
+}
+.information_personal h1 {
+    font-size: 24px;
+    color: #003960;
+    margin: 30px 0px;
+}
+.information_personal p {
+    font-size: 18px;
+    margin: 20px 0px;
+}
+.space_text {
+    font-size: 18px;
+    margin: 20px 0px;
+    margin-left: 35px;
+}
+.name_text_privacy {
+    display: block;
+    margin-top: 25px;
+    align-self: center;
+    text-align: center;
+    font-size: 30px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    color: #003960;
+}
+@media (max-width:900px) {
+    .slide_pesonal_information {
+        margin-top: 50px;
+    }
+}
