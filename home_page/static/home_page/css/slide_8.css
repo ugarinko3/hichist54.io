@@ -49,10 +49,9 @@
 }
 .text_info_eight {
     width: 70%;
-    margin: auto;
     font-size: 20px;
     margin-top: 10px;
-    text-align: center;
+    justify-content: center;
 }
 .logo_icon {
     width: 30px;
@@ -68,14 +67,18 @@
     font-size: 18px;
 }
 .info_slide {
+    width: 100%;
     display: grid;
     grid-auto-flow: column;
     margin: 25px;
-    grid-template-columns: 35px 350px;
+    justify-content: center;
+    align-self: center;
+    grid-template-columns: 35px 300px;
 }
 .slide_eight .info_eight {
-    width: 50%;
-    margin-left: 28%;
+    width: 350px;
+    justify-content: center;
+    margin: auto;
 }
 .title_info {
     width: 100%;
@@ -109,7 +112,7 @@
     .map {
         margin: auto;
         margin-top: 25px;
-        width: 97%;
+        width: 90%;
     }
     .eight {
         grid-auto-flow: row;

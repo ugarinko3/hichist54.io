@@ -6,7 +6,7 @@
 }
 .calculator {
     width: 55%;
-    height: 100%;
+    height: auto;
     display: grid;
     justify-self: center;
     grid-auto-rows: auto;
@@ -157,19 +157,46 @@ input[type="radio"]:hover {
     justify-self: center;
     margin-top: 35px;
 }
-.slide_five .otput_email {
-    margin: 50px;
+.slide_five .button_modal {
+    display: block;
+    width: 80%;
+    height: 60px;
+    border-radius: 25px;
+    border: 2px solid #003960;
+    transition: background .4s ease-out;
+    color: #003960;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 50px;
+
 }
-.slide_five .sending_by_mail {
-    width: 50%;
+.slide_five .button_modal:hover {
+    background-color: #003960;
+    color: #fff;
+    border-radius: 25px;
+}
+.slide_five .input {
+    width: 97%;
     height: 60px;
     justify-self: center;
-    font-size: 24px;
     border-radius: 15px;
-    border: 2px solid #003960;
+    margin-top: 30px;
+    border: 2px solid #4682B4;
 }
-.slide_five button[type="button"]:checked {
-    background-color: #003960; /* Цвет фона */
+.slide_five input {
+    padding: 0px 8px;
+}
+.person_dan {
+    display: block;
+    width: 100%;
+}
+.person_dan p{
+    width: 80%;
+    font-size: 14px;
+    padding: 0px 5px;
+    color: #1f2024;
+    margin: auto;
 }
 @media  (max-width: 1070px){
     .calculator {

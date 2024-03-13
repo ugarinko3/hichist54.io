@@ -1,13 +1,61 @@
-document.getElementById("submitBtn").addEventListener("click", function() {
-    var option1 = document.getElementById("a_square_width");
-    var option2 = document.getElementById("type_design");
-    var option3 = document.getElementById("type_manufacturing");s
-    var errorDiv = document.getElementById("error");
+function validation(form){
+
+    function removeError(input) {
+        const parent = input.parentNode;
+        if (parent.classList.contains('error')) {
+            parent.querySelector('.error-label').remove()
+            parent.classList.remove('error')
+        }
+    }
+    function createError(input, text) {
+        const parent = input.parentNode;
+        const errorLabel = document.createElement('label')
+
+        errorLabel.classList.add('error-label')
+        errorLabel.textContent = text
+
+        parent.classList.add('error')
+
+        parent.append(errorLabel)
+    }
     
-    if (option1.checked && option2.checked && option3.checked) {
-        errorDiv.textContent = "Borm"; // Скрыть сообщение об ошибке
-        alert("Form submitted successfully!"); // Действие при успешной отправке формы
-    } else {
-        errorDiv.textContent = "Please select all options."; // Отобразить сообщение об ошибке
+    
+    let result = true;
+
+    const allInput = form.querySelectorAll('input');
+    num = -1;
+    for(const input of allInput) {
+        num += 1;
+        removeError(input)
+        if (num === 1){
+            const secondInput = allInput[num].value;
+            let onlyDigits = secondInput.replace(/\D/g, "");
+            if (onlyDigits.length!==11){
+                createError(allInput[num], 'Поле не знаполнено!')
+                result = false
+            }
+        }
+        if(input.value==''){
+            result = false
+            createError(input, 'Поле не знаполнено!')
+        }
+    }
+
+    return result
+}
+
+
+
+document.getElementById('form_name_phone').addEventListener('submit', function(event){
+    event.preventDefault()
+    if (validation(this)==true){
+
     }
 });
+document.getElementById('form_calculator').addEventListener('submit', function(event){
+    event.preventDefault()
+    if (validation(this)==true){
+
+    }
+});
+
