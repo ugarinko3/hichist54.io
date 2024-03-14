@@ -16,18 +16,19 @@
     text-align: center;
 }
 .materials {
+    display: inline-table;
     justify-self: center;
     width: 98%;
-    height: 15%;
     margin-top: 35px;
 }
 .manufacturing {
+    display: inline-table;
     justify-self: center;
     width: 98%;
-    height: 15%;
     margin-top: 35px;
 }
 .slide_five .input_choice {
+    display: inline-table;
     width: 98%;
     height: 60px;
     border-radius: 15px;
@@ -47,7 +48,6 @@ select {
 .slide_five .square_carpet {
     justify-self: center;
     width: 98%;
-    height: 15%;
 }
 .slide_five .square {
     display: grid;
@@ -55,12 +55,8 @@ select {
     grid-auto-rows: auto;
     margin-top: 35px;
 }
-.slide_five .input {
-    width: 98%;
-    height: 60px;
-    justify-self: center;
-    border-radius: 15px;
-    border: 2px solid #4682B4;
+.input-box {
+    margin-top: 30px;
 }
 .label_flex {
     display: flex;
@@ -68,6 +64,7 @@ select {
     
 }
 .slide_five .text_title {
+    padding: 0px 15px;
     text-align: left;
 }
 .slide_five .text {
@@ -84,9 +81,11 @@ select {
 }
 
 .states_from {
+    display: inline-table;
     justify-self: center;
     width: 98%;
     margin-top: 35px;
+
 }
 
 .states {
@@ -96,6 +95,7 @@ select {
 }
 label {
     display: block;
+    margin-left: 20px;
     margin-right: 20px; /* Расстояние между радиокнопками */
 }
 /* Основные стили для радио-кнопок */
@@ -181,7 +181,6 @@ input[type="radio"]:hover {
     height: 60px;
     justify-self: center;
     border-radius: 15px;
-    margin-top: 30px;
     border: 2px solid #4682B4;
 }
 .slide_five input {
@@ -197,6 +196,14 @@ input[type="radio"]:hover {
     padding: 0px 5px;
     color: #1f2024;
     margin: auto;
+}
+.input_choice.error {
+    border-color: rgb(170, 10, 10);
+}
+.error-label {
+    display: block;
+    color: rgb(170, 10, 10);
+    margin-bottom: 10px;
 }
 @media  (max-width: 1070px){
     .calculator {

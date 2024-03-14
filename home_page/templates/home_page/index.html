@@ -14,12 +14,14 @@
     <link rel="stylesheet" href="{% static 'home_page/css/slide_6.css' %}">
     <link rel="stylesheet" href="{% static 'home_page/css/slide_7.css' %}">
     <link rel="stylesheet" href="{% static 'home_page/css/slide_8.css' %}">
+    <link rel="stylesheet" href="{% static 'home_page/css/slide_main.css' %}">
     <link rel="stylesheet" href="{% static 'home_page/css/slide_discount.css' %}">
     <link rel="stylesheet" href="{% static 'home_page/css/slider/slider.css' %}">
     <link rel="stylesheet" href="{% static 'home_page/css/slider/slider2.css' %}">
     <link rel="stylesheet" href="{% static 'home_page/css/slider/slider3.css' %}">
     <link rel="stylesheet" href="{% static 'home_page/css/menu.css' %}">
     <link rel="stylesheet" href="{% static 'home_page/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'home_page/css/modal-successful-bid.css' %}">
     <link rel="stylesheet" href="{% static 'home_page/css/modal_window.css' %}">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">  
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
@@ -42,6 +44,9 @@
         }
     </script>
     <title>Хичист - фабрика стирки ковров</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="icon" href="../../static/home_page/img/logo/boshka.png" type="image/png" media="(prefers-color-scheme: light)">
     <link rel="icon" href="../../static/home_page/img/logo/boshka_2.png" type="image/png" media="(prefers-color-scheme: dark)">
 </head>
@@ -63,16 +68,16 @@
                                     <button class="header_link" onclick="scrollToDivOne()" type="button">Главная</button>
                                 </li>
                                 <li>
-                                    <button class="header_link" onclick="scrollToDivTwo()" type="button">Услуги</button>
+                                    <button class="header_link" onclick="scrollToDivFour()" type="button">Этапы</button>
+                                </li>
+                                <li>
+                                    <button class="header_link" onclick="scrollToDivFive()" type="button">Льготы</button>
                                 </li>
                                 <li>
                                     <button class="header_link" onclick="scrollToDivThree()" type="button">Калькулятор</button>
                                 </li>
                                 <li>
-                                    <button class="header_link" onclick="scrollToDivFour()" type="button">Этапы</button>
-                                </li>
-                                <li>
-                                    <button class="header_link" onclick="scrollToDivFive()" type="button">Льготы</button>
+                                    <button class="header_link" onclick="scrollToDivTwo()" type="button">Услуги</button>
                                 </li>
                                 <li>
                                     <div class="info_eight">
@@ -119,50 +124,55 @@
             </header>
         </div>
         <div class="slide_one" id="slide_one">
-            <div class="conteiner_one">
-                <div class="switch_slide_one">
-                    <input checked type="radio" name="slider_slide_one" id="one">
-                    <input type="radio" name="slider_slide_one" id="two">
-                    <input type="radio" name="slider_slide_one" id="three">
-                    <div id="slides">
-                        <div id="overflow">
-                            <div class="image">
-                                <article><img class="img" src="{% static 'home_page/img/main_slide/slide_4.png' %}"></article>
-                                <article><img class="img" src="{% static 'home_page/img/main_slide/slide_2.jpg' %}"></article>
-                                <article><img class="img" src="{% static 'home_page/img/main_slide/slide_3.jpg' %}"></article>
-                            </div>
-                        </div>
+            <div class="blockSlider" id="blockSlider">
+                <div class="FullArea">
+                    <div class="imagesArea">
+                        <img class="imageSlider" src="{% static 'home_page/img/main_slide/slide_4.png' %}" alt="">
+                        <img class="imageSlider" src="{% static 'home_page/img/main_slide/slide_2.jpg' %}" alt="">
+                        <img class="imageSlider" src="{% static 'home_page/img/main_slide/slide_3.jpg' %}" alt="">
                     </div>
-                    <div class="controls">
-                        <label for="one"></label>
-                        <label for="two"></label>
-                        <label for="three"></label>
+        
+                    <div class="pointsAreaSize">
+                        <span class="point"></span>
+                        <span class="point"></span>
+                        <span class="point"></span>
+                    </div>
+                    <div class="btnsAreaSize">
+                        <div class="blockArrow" id="leftBtn"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+                        <div class="blockArrow" id="rightBtn"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
                     </div>
                     <div class="wrapper">
-                        <div class="box box_one active">
-                            <h1>Доставка</h1>
-                            <p>Наша транспортная служба в удобное вам <span class="colortext">время</span> заберет ковер</p>
-                            <div class="button">
-                                <button type="button" id="button_slide">Оформить заявку</button>
+                        <div class="box-info">
+                            <div class="box box_one">
+                                <h1>Доставка</h1>
+                                <p>Наша транспортная служба в удобное вам <span class="colortext">время</span> заберет ковер и привезет его обратно, как только закончим обработку. Мы уделяем особое внимание вашему удобству и безопасности.</p>
+                                <div class="button">
+                                    <button type="button" id="button_slide">Оформить заявку</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="box box_two">
-                            <h1>Стирка ковров</h1>
-                            <p>от <span class="colortext">250</span> руб/м<sup>2</sup></p>
-                            <div class="button">
-                                <button onclick="scrollToDivTwo()" type="button" id="button_services">Подробнее</button>
+                        <div class="box-info">
+                            <div class="box box_two">
+                                <h1>Стирка ковров</h1>
+                                <p>от <span class="colortext">250</span> руб/м<sup>2</sup></p>
+                                <div class="button">
+                                    <button onclick="scrollToDivTwo()" type="button" id="button_services">Подробнее</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="box box_three">
-                            <h1>Калькулятор</h1>
-                            <p>Расчитайте <span class="colortext">ценну</span> заранее</p>
-                            <div class="button">
-                                <button onclick="scrollToDivThree()" type="button" id="button_calculator">Подробнее</button>
+                        <div class="box-info">
+                            <div class="box box_three">
+                                <h1>Калькулятор</h1>
+                                <p>Рассчитайте <span class="colortext">цену</span> заранее. Просто используйте наш удобный калькулятор</p>
+                                <div class="button">
+                                    <button onclick="scrollToDivThree()" type="button" id="button_calculator">Подробнее</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <script src="../../static/home_page/js/app.js"></script>
         </div>
         <div class="slide_two">
             <div class="name_class">
@@ -231,7 +241,7 @@
                             </div>
                             <div class="text_cell" >
                                 <div class="item_desc">
-                                    <p>Бесплатно собираем, снимаем, упаковываем, выносим ковры и доставляем уже готовую работу</p>
+                                    <p>Собираем, снимаем, упаковываем, выносим ковры и доставляем уже готовую работу</p>
                                 </div>
                             </div>
                         </div>
@@ -288,7 +298,7 @@
                                         </div>
                                         <h1>Вывоз и доставка</h1>
                                     </div>
-                                    <p>Бесплатно собираем, снимаем, упаковываем, выносим ковры и доставляем уже готовую работу</p>
+                                    <p>Собираем, снимаем, упаковываем, выносим ковры и доставляем уже готовую работу</p>
                                 </div>
                                 <div class="msg-column">
                                     <div class="img_h1">
@@ -308,7 +318,7 @@
                             <div class="line2" id="line2_id"></div>
                             <div class="line3" id="line3_id"></div>
                             <div class="line4" id="line4_id"></div>
-                            <div class="active" id="active_id"></div>
+                            <div class="space_active" id="active_id"></div>
                             <script src="../../static/home_page/js/controls_slide_two.js"></script>
                         </div>
                     </div>
@@ -325,7 +335,7 @@
                     <span></span>
                 </div>
                 <div class="class_text">
-                    <p class="text">Компания «Химчист» предлагает комплексные услуги по стирке ковров: забираем грязные изделия из дома или офиса, через 2-4 дня привозим абсолютно чистые! Вывоз и доставка осуществляется бесплатно. Для вас работают опытные специалисты, которые подберут подходящий способ обработки и моющие средства, учитывая материал коврового покрытия и степень загрязнения. Работаем с частными лицами и коммерческими организациями в Новосибирске. Обращайтесь, если нужна профессиональная стирка ковра недорого.</p>
+                    <p class="text">Компания «Химчист» предлагает комплексные услуги по стирке ковров: забираем грязные изделия из дома или офиса, через 2-4 дня привозим абсолютно чистые! Вывоз и доставка осуществляется по прайс листу. Для вас работают опытные специалисты, которые подберут подходящий способ обработки и моющие средства, учитывая материал коврового покрытия и степень загрязнения. Работаем с частными лицами и коммерческими организациями в Новосибирске. Обращайтесь, если нужна профессиональная стирка ковра недорого.</p>
                 </div>
                 <div class="space"></div>
             </div>
@@ -523,7 +533,7 @@
                     <span></span>
                 </div>
                 <div class="class_text">
-                    <p class="text">Стирка на фабрике — самый эффективный способ придать ковру чистоту и свежесть, избавив его даже от сложных загрязнений. Наш цех оснащен специализированным промышленным оборудованием, которое позволяет провести максимально глубокую стирку коврового покрытия, а также деликатно очистить изделия, которым противопоказано обильное смачивание — шелковые, вискозные и ковры ручной работы.<br></br>Наша транспортная служба в удобное вам время бесплатно заберет ковер и доставит его на фабрику, а после — привезет его совершенно чистым к вам обратно.</p>
+                    <p class="text">Стирка на фабрике — самый эффективный способ придать ковру чистоту и свежесть, избавив его даже от сложных загрязнений. Наш цех оснащен специализированным промышленным оборудованием, которое позволяет провести максимально глубокую стирку коврового покрытия, а также деликатно очистить изделия, которым противопоказано обильное смачивание — шелковые, вискозные и ковры ручной работы.<br></br>Наша транспортная служба в удобное вам время заберет ковер и доставит его на фабрику, а после — привезет его совершенно чистым к вам обратно.</p>
                 </div>
                 <div class="space"></div>
             </div>
@@ -536,79 +546,79 @@
                 <div class="line">
                     <span></span>
                 </div>
-                <div class="square_carpet">
-                    <div class="square">
-                        <div class="text_title">
-                            <p class="text">Длина(в метрах):</p>
+                <form action="" class="form" id="form_calculator">
+                    <div class="square_carpet">
+                        <div class="square">
+                            <div class="text_title">
+                                <p class="text">Длина(в метрах):</p>
+                            </div>
+                            <input class="input" type="number" id="a_square_length" onchange="calc()" />
                         </div>
-                        <input class="input" type="number" id="a_square_length" onchange="calc()" />
-                    </div>
-                    <div class="square">
-                        <div class="text_title">
-                            <p class="text">Ширина(в метрах):</p>
+                        <div class="square">
+                            <div class="text_title">
+                                <p class="text">Ширина(в метрах):</p>
+                            </div>
+                            <input class="input" type="number" id="a_square_width" onchange="calc()" />
                         </div>
-                        <input class="input" type="number" id="a_square_width" onchange="calc()" />
                     </div>
-                </div>
-                <div class="manufacturing">
-                    <div class="text_title">
-                        <p class="text">Тип изготовления:</p>
+                    <div class="manufacturing">
+                        <div class="text_title">
+                            <p class="text">Тип изготовления:</p>
+                        </div>
+                        <select class="input_choice" onchange="calc()" id="type_manufacturing">
+                            <option value="0" selected="selected">Выберите вариант</option>
+                            <option value="1000">Ручная работа</option>
+                            <option value="2000">Машинная работа</option>
+                        </select>
                     </div>
-                    <select class="input_choice" onchange="calc()" id="type_manufacturing">
-                        <option value="0" selected="selected">Выберите вариант</option>
-                        <option value="1000">Ручная работа</option>
-                        <option value="2000">Машинная работа</option>
-                    </select>
-                </div>
-                <div class="materials">
-                    <div class="text_title">
-                        <p class="text">Тип материала:</p>
+                    <div class="materials">
+                        <div class="text_title">
+                            <p class="text">Тип материала:</p>
+                        </div>
+                        <select class="input_choice" onchange="calc()" id="type_design">
+                            <option value="0" selected="selected">Выберите вариант</option>
+                            <option value="250">Синтетика</option>
+                            <option value="250">Шерсть</option>
+                            <option value="300">Вискоза</option>
+                            <option value="300">Шелк</option>
+                            <option value="280">Шегги</option>
+                        </select>
                     </div>
-                    <select class="input_choice" onchange="calc()" id="type_design">
-                        <option value="0" selected="selected">Выберите вариант</option>
-                        <option value="250">Синтетика</option>
-                        <option value="250">Шерсть</option>
-                        <option value="300">Вискоза</option>
-                        <option value="300">Шелк</option>
-                        <option value="280">Шегги</option>
-                    </select>
-                </div>
-                <div class="states_from">
-                    <div class="text_title">
-                        <p class="text">Состояние ковра:</p>
+                    <div class="states_from">
+                        <div class="text_title">
+                            <p class="text">Состояние ковра:</p>
+                        </div>
+                        <div class="states_from_button">
+                            <label class="label_flex">
+                                <input type="radio" name="state" value="1" id="state_flex_1" onchange="calc()" checked>
+                                <p class="text_label">Сухой ковёр без биологических загрязнений</p>
+                            </label>
+                            <label class="label_flex">
+                                <input type="radio" name="state" value="1.5" id="state_flex_2" onchange="calc()">
+                                <p class="text_label">Ковёр во влажном состоянии или после пожара</p>
+                            </label>
+                            <label class="label_flex">
+                                <input type="radio" name="state" value="1.5" id="state_flex_3" onchange="calc()">
+                                <p class="text_label">Есть биологические загрязнения (моча, рвота и т.д.)</p>
+                            </label>
+                        </div>
                     </div>
-                    <form class ="states">
-                        <label class="label_flex">
-                        <input type="radio" name="state" value="1" id="state_flex" onchange="calc()">
-                        <p class="text_label">Сухой ковёр без биологических загрязнений</p>
-                        </label>
-                        <label class="label_flex">
-                        <input type="radio" name="state" value="1.5" id="state_flex" onchange="calc()">
-                        <p class="text_label">Ковёр во влажном состоянии или после пожара</p>
-                        </label>
-                        <label class="label_flex">
-                        <input type="radio" name="state" value="1.5" id="state_flex" onchange="calc()">
-                        <p class="text_label">Есть биологические загрязнения (моча, рвота и т.д.)</p>
-                        </label>
-                    </form>
-                </div>
-                <div class="summa">
-                    <div class="text_title">
-                        <p class="text">Сумма: </p>
+                    <div class="summa">
+                        <div class="text_title">
+                            <p class="text">Сумма: </p>
+                        </div>
+                        <div id="result">0 руб.</div>
                     </div>
-                    <div id="result">0 руб.</div>
-                </div>
-                <div class="input_name_phome">
-                    <form action="" class="form" id="form_calculator">
+                    <div class="input_name_phome">
                         <div class="input-box">
                             <input class="input" type="text" placeholder="Ваше имя" id="username_calculator">
                         </div>
                         <div class="input-box">
                             <input class="input" type="tel" id="phone_calculator" name="phone">
                         </div>
-                        <button type="submit" class="button_modal" id="button_modal-1">Отправить</button>
-                    </form>
-                </div>
+                    </div>
+                    <button type="submit" class="button_modal" id="button_modal-1">Отправить</button>
+                </form>
                 <div class="person_dan">
                     <p>Нажимая на кнопку «Отправить», я даю согласие на обработку моих <a href="privacy">персональных данных.</a></p>
                 </div>
@@ -801,54 +811,58 @@
             <div class="space"></div>
             <div class="eight">
                 <div class="info_slide_eight">
-                    <div class="space"></div>
-                    <div class="logo_text">
-                        <div class="logo">
-                            <img class="logo_boshka" src="../../static/home_page/img/logo/boshka.png">
+                    <div class="container_eight">
+                        <div class="container_box">
+                            <div class="space"></div>
+                            <div class="logo_text">
+                                <div class="logo">
+                                    <img class="logo_boshka" src="../../static/home_page/img/logo/boshka.png">
+                                </div>
+                                <div class="title_text">Химчист</div>
+                            </div>
+                            <p class="title_info">Фабрика стирки ковров в Новосибирске</p>
+                            <div class="info_eight">
+                                <div class="info_slide">
+                                    <div class="icon_info">
+                                        <img class="logo_icon" src="../../static/home_page/img/icon_slade/phone.png">
+                                    </div>
+                                    <div class="text_slide">
+                                        <span><a href="tel: +79137378283">+7 (913) 737-82-83</a></span>
+                                    </div>
+                                </div>
+                                <div class="info_slide">
+                                    <div class="icon_info">
+                                        <img class="logo_icon" src="../../static/home_page/img/icon_slade/mail.png">
+                                    </div>
+                                    <div class="text_slide">
+                                        <p>hichist.fabrika@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="info_slide">
+                                    <div class="icon_info">
+                                        <img class="logo_icon" src="../../static/home_page/img/icon_slade/location.png">
+                                    </div>
+                                    <div class="text_slide">
+                                        <p>г.Новосибирск, ул. Грибоедова, 2Б</p>
+                                    </div>
+                                </div>
+                                <div class="info_slide">
+                                    <div class="icon_info">
+                                        <img class="logo_icon" src="../../static/home_page/img/icon_slade/clock.png">
+                                    </div>
+                                    <div class="text_slide">
+                                        <p>График работы: 9:00 - 20:00</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="title_text">Химчист</div>
-                    </div>
-                    <p class="title_info">Фабрика стирки ковров в Новосибирске</p>
-                    <div class="info_eight">
-                        <div class="info_slide">
-                            <div class="icon_info">
-                                <img class="logo_icon" src="../../static/home_page/img/icon_slade/phone.png">
+                        <div class="icon_conection">
+                            <div class="vk">
+                                <p><a href="https://vk.com/hichist"><img  class="vk-icon" src="../../static/home_page/img/icon_slade/vk.png" width="30px" height="30px" border-radius="50"></a></p>
                             </div>
-                            <div class="text_slide">
-                                <span><a href="tel: +79137378283">+7 (913) 737-82-83</a></span>
+                            <div class="whatsapp">
+                                <p><a href=" https://api.whatsapp.com/send?phone=79137378283"><img  class="whatsapp-icon" src="../../static/home_page/img/icon_slade/whatsapp.png" width="30px" height="30px" border-radius="50"></a></p>
                             </div>
-                        </div>
-                        <div class="info_slide">
-                            <div class="icon_info">
-                                <img class="logo_icon" src="../../static/home_page/img/icon_slade/mail.png">
-                            </div>
-                            <div class="text_slide">
-                                <p>hichist.fabrika@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="info_slide">
-                            <div class="icon_info">
-                                <img class="logo_icon" src="../../static/home_page/img/icon_slade/location.png">
-                            </div>
-                            <div class="text_slide">
-                                <p>г.Новосибирск, ул. Грибоедова, 2Б</p>
-                            </div>
-                        </div>
-                        <div class="info_slide">
-                            <div class="icon_info">
-                                <img class="logo_icon" src="../../static/home_page/img/icon_slade/clock.png">
-                            </div>
-                            <div class="text_slide">
-                                <p>График работы: 9:00 - 20:00</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="icon_conection">
-                        <div class="vk">
-                            <p><a href="https://vk.com/hichist"><img  class="vk-icon" src="../../static/home_page/img/icon_slade/vk.png" width="30px" height="30px" border-radius="50"></a></p>
-                        </div>
-                        <div class="whatsapp">
-                            <p><a href=" https://api.whatsapp.com/send?phone=79137378283"><img  class="whatsapp-icon" src="../../static/home_page/img/icon_slade/whatsapp.png" width="30px" height="30px" border-radius="50"></a></p>
                         </div>
                     </div>
                 </div>
@@ -861,7 +875,7 @@
             </div>
         </div>
         <div class="text_reklama">
-            <p class="text">Made on <a href="https://t.me/ugarinko">@ugarinko</a></p>
+            <p class="text">Made in <a href="https://t.me/ugarinko">@ugarinko</a></p>
         </div>
         <div class="modal_window" id="window">
             <div class="modal_box">
@@ -889,7 +903,44 @@
                 </div>
             </div>
         </div>
+        <div class="modal-successful-bid" id="successful">
+            <div class="pop-modal-successful-box">
+                <p>Ваша заявка успешна отправлена, наш менеджер перезвонит в течение 15 минут.</p>
+                <p>Спасибо за ваше доверие.</p>
+            </div>
+        </div>
     </div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-4">
+                <form action="mail.php" method="POST">
+                    <legend>Заголовок формы</legend>
+  
+                    <div class="form-group">
+                        <label for="">Введите ваше имя</label>
+                        <input type="text" class="form-control" id="" name="user_name" placeholder="Например, Иван">
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="">Введите номер телефона</label>
+                        <input type="text" class="form-control" id="" name="user_phone" placeholder="+7 (999) 99 99 999">
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="">Введите email</label>
+                        <input type="text" class="form-control" id="" name="user_email" placeholder="mail@mail.ru">
+                    </div>
+                
+                    <button type="submit" class="btn btn-primary">Отправить форму</button>
+                </form>
+            </div><!-- .col-sm-4 -->
+        </div> <!-- .row -->
+    </div><!-- /.container -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="https://unpkg.com/imask"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="../../static/home_page/js/menu.js"></script>

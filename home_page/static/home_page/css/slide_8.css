@@ -16,7 +16,13 @@
     grid-row-start: 1;
     height: 450px;
     width: 100%;
+    text-align: left;
     background-color: #f1f1f1;
+}
+.container_eight {
+    width: 388px;
+    height: 100%;
+    margin: auto;
 }
 .map {
     height: 400px;
@@ -29,8 +35,9 @@
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 44px ;
-    width: 25%;
+    width: 100%;
     margin: auto;
+    text-align: left;
 }
 .logo {
     width: 44px;
@@ -65,24 +72,22 @@
     width: 350px;
     height: 32px;
     font-size: 18px;
+    text-align: left;
 }
 .info_slide {
     width: 100%;
     display: grid;
     grid-auto-flow: column;
-    margin: 25px;
-    justify-content: center;
+    margin: 20px 0px;
     align-self: center;
     grid-template-columns: 35px 300px;
 }
 .slide_eight .info_eight {
-    width: 350px;
-    justify-content: center;
-    margin: auto;
+    width: 100%;
 }
 .title_info {
     width: 100%;
-    text-align: center;
+    text-align: left;
     font-size: 18px;
 }
 .vk {
@@ -91,13 +96,16 @@
 .icon_conection  p{
     width: 34px;
     height: 34px;
-    margin: auto;
+    text-align: left;
 }
 .icon_conection {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 40px 40px;
     justify-content: center;
+}
+.container_box {
+    margin-left: 15px;
 }
 @media  (max-width: 1200px){
     .map {

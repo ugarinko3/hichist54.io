@@ -18,21 +18,21 @@
 }
 .slide_four .image {
   display: block;
-  height: 220px;
+  height: 200px;
   width:  220px;
+  margin-right: 20px;
 }
 .slide_four .four .four_text { /* Правая ячейка */ 
   display: block;
   justify-self: center;
   align-self: center;
-  margin-left: 10px;
+  margin-left: 20px;
   text-align: left; /* Выравнивание по правому краю */
   width: 60%;
 }
 .slide_four .img {
   height: 200px;
   width: 100%;
-  border: 3px solid #003960;
   border-radius: 15px;
 }
 #img_one {
@@ -81,18 +81,24 @@
   }
 }
 @media  (max-width: 1070px){
+  .slide_four .four {
+    display: grid;
+    grid-auto-flow: row;
+
+  }
   .slide_four .image {
     display: block;
-    text-align: right;
-    width:  70px; /* Ширина */
+    text-align: center;
+    width:  100%; /* Ширина */
+    height: 70px;
   }
   .slide_four .four .four_text { /* Правая ячейка */ 
     display: block;
-    justify-self: start;
-    align-self: start;
+    justify-self: center;
+    align-self: center;
     margin-left: 10px;
-    text-align: left; /* Выравнивание по правому краю */
-    width: 60%;
+    text-align: center; /* Выравнивание по правому краю */
+    width: 90%;
   }
   .slide_four .img {
     display: inline-block;

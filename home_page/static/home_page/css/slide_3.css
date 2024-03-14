@@ -76,6 +76,21 @@
         justify-content: space-between;
     }
     .slide_three .img {
+        width: 400px;
+    }
+    #slider3 { /*положение слайдера*/
+        width: 410px;
+    }
+    #slider2 { /*положение слайдера*/
+        width: 410px;
+    }
+    #slider { /*положение слайдера*/
+        width: 410px;
+    }
+
+}
+@media  (max-width: 450px){
+    .slide_three .img {
         width: 98%;
     }
     #slider3 { /*положение слайдера*/
@@ -87,5 +102,4 @@
     #slider { /*положение слайдера*/
         width: 91%;
     }
-
 }
