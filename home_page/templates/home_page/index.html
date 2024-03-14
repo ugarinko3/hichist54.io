@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="{% static 'home_page/css/slide_1.css' %}">
     <link rel="stylesheet" href="{% static 'home_page/css/slide_2.css' %}">
     <link rel="stylesheet" href="{% static 'home_page/css/slide_3.css' %}">
@@ -26,23 +29,6 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">  
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script type="text/javascript">
-        function calc() {
-            var length = parseFloat(document.getElementById("a_square_length").value); // Получаем значение длины из поля ввода
-            var width = parseFloat(document.getElementById("a_square_width").value); // Получаем значение ширины из поля ввода
-            var typeManufacturing = parseFloat(document.getElementById("type_manufacturing").value); // Получаем выбранный тип изготовления
-            var typeDesign = parseFloat(document.getElementById("type_design").value); // Получаем выбранный тип материала
-            var state = parseFloat(document.querySelector('input[name="state"]:checked').value); // Получаем выбранное состояние ковра
-            if (isNaN(length) || isNaN(width) || typeManufacturing === 0 || typeDesign === 0 || isNaN(state)) {
-                // Если какое-то из значений не было выбрано, прерываем выполнение функции
-                return;
-            }
-            var area = length * width; // Вычисляем площадь ковра
-            var totalPrice = ((area * typeDesign) + typeManufacturing) * state ; // Вычисляем общую стоимость
-            // Выводим результат на страницу
-            document.getElementById("result").innerHTML = totalPrice + " руб.";
-        }
-    </script>
     <title>Хичист - фабрика стирки ковров</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -911,7 +897,6 @@
         </div>
     </div>
     <div class="container">
-
         <div class="row">
             <div class="col-sm-4">
                 <form action="mail.php" method="POST">
