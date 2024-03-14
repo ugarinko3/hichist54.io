@@ -31,6 +31,7 @@
     padding: 10px 15px;
     position: relative;
     cursor: pointer;
+    margin-left: 0px;
     transition: background .2s ease-out;
     border-radius: 15px;
     font-weight: bold;
