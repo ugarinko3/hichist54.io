@@ -183,28 +183,31 @@ i.fa.fa-angle-left, i.fa.fa-angle-right{
     100% {opacity: 1;}
 }
 @media  (max-width: 900px){
-    .box {
-        padding: 0px 10% 15px 10%;
-    }
-    .box_one {
-        width: 98%;
-        height: auto;
-        top: 41%;
-        left: 30%;
-        transform: translate(center);
-    }
-    .box_two {
-        width: 98%;
-        height: auto;
-        left: 30%;
-        top: 43%;
-        transform: translate(center);
-    }
-    .box_three {
-        width: 98%;
-        height: auto;
-        left: 30%;
-        top: 43%;
-        transform: translate(center);
-    }
+  .imageSlider {
+    width: 180%;
+  }
+  .box {
+      padding: 0px 10% 15px 10%;
+  }
+  .box_one {
+    width: 98%;
+    height: auto;
+    top: 41%;
+    left: 30%;
+    transform: translate(center);
+  }
+  .box_two {
+    width: 98%;
+    height: auto;
+    left: 30%;
+    top: 43%;
+    transform: translate(center);
+  }
+  .box_three {
+    width: 98%;
+    height: auto;
+    left: 30%;
+    top: 43%;
+    transform: translate(center);
+  }
 }
