@@ -264,8 +264,6 @@ input[type="radio"]:hover {
     border-radius: 20px;
     padding: 10px;
 }
-.tippy-box p {
-}
 @media  (max-width: 1070px){
     .calculator {
         width: 75%;
