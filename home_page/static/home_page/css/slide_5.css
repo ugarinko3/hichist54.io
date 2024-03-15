@@ -34,17 +34,6 @@
     border-radius: 15px;
     border: 2px solid #4682B4;
 }
-option {
-    color:#1f2024;
-}
-select {
-    color:#1f2024;
-    border:1px solid #c9c9c9;
-    border-radius: 15px;
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px;
-    width: 98%;
-}
 .slide_five .square_carpet {
     justify-self: center;
     width: 98%;
@@ -168,6 +157,26 @@ input[type="radio"]:hover {
 .slide_five .summa .text_title .text {
     margin: 0;
 }
+.input_choice {
+    appearance: none; /* убираем стандартные стили браузера */
+    -webkit-appearance: none;
+    -moz-appearance: none; /* граница */
+    padding: 8px 20px; /* внутренний отступ */
+    font-size: 20px; /* размер шрифта */
+    border-radius: 5px; /* закругление углов */
+    outline: none; /* убираем обводку при фокусе */
+}
+.choice {
+    border: 2px solid #003960;
+}
+.input_choice:hover {
+    background-color: #f1f1f1; /* цвет фона при наведении */
+}
+
+.input_choice:focus {
+    background-color: #f1f1f1;
+    border-color: #003960; /* цвет границы при фокусе */
+}
 
 .slide_five .button_modal {
     display: block;
@@ -183,6 +192,29 @@ input[type="radio"]:hover {
     margin-top: 50px;
 
 }
+.icon_svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 24px;
+    height: 24px;
+}
+.icon_svg .one_setting{
+    width: 24px;
+    height: 24px;
+    color: #003960;
+}
+.icon_svg .two_setting{
+    width: 24px;
+    height: 24px;
+    color: #003960;
+}
+.icon_svg:hover {
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0.6;
+}
 .slide_five .button_modal:hover {
     background-color: #003960;
     color: #fff;
@@ -194,9 +226,19 @@ input[type="radio"]:hover {
     justify-self: center;
     border-radius: 15px;
     border: 2px solid #4682B4;
+    appearance: none; /* убираем стандартные стили браузера */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 8px 20px; /* внутренний отступ */
+    font-size: 20px; /* размер шрифта */
+    outline: none;
 }
-.slide_five input {
-    padding: 0px 8px;
+.slide_five .input:hover {
+    background-color: #f1f1f1;
+}
+.slide_five .input:focus {
+    background-color: #f1f1f1;
+    border: 2px solid #003960;
 }
 .person_dan {
     display: block;
@@ -216,6 +258,13 @@ input[type="radio"]:hover {
     display: block;
     color: rgb(170, 10, 10);
     margin-bottom: 10px;
+}
+.tippy-box {
+    background-color: rgb(0, 39, 60, .9);
+    border-radius: 20px;
+    padding: 10px;
+}
+.tippy-box p {
 }
 @media  (max-width: 1070px){
     .calculator {

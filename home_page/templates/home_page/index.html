@@ -550,9 +550,9 @@
                             <p class="text">Тип изготовления:</p>
                         </div>
                         <select class="input_choice" id="type_manufacturing">
-                            <option value="0" selected="selected">Выберите вариант</option>
-                            <option value="1000">Ручная работа</option>
-                            <option value="2000">Машинная работа</option>
+                            <option class='choice' value="0" selected="selected">Выберите вариант</option>
+                            <option class='choice' value="1000"><p>Ручная работа</p></option>
+                            <option class='choice' value="2000">Машинная работа</option>
                         </select>
                     </div>
                     <div class="materials">
@@ -592,6 +592,12 @@
                             <p class="text">Сумма: </p>
                         </div>
                         <div id="result">0 руб.</div>
+                        <span class="icon_svg" data-tippy-content="Пожалуйста, обратите внимание, что предоставленный расчет является предварительным и не учитывает возможные скидки или наценку за срочность. Точная стоимость услуги будет определена после осмотра изделия мастером на месте или технологом на фабрике.">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                                <path class="one_setting" d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path class="two_setting" d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                              </svg>
+                        </span>
                     </div>
                     <div class="input_name_phome">
                         <div class="input-box">
@@ -899,8 +905,10 @@
     <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="https://unpkg.com/imask"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="../../static/home_page/js/info.js"></script>
     <script src="../../static/home_page/js/menu.js"></script>
-    <script src="../../static/home_page/js/slide_scroll.js"></script>
     <script src="../../static/home_page/js/menu_button.js"></script>
     <script defer src="../../static/home_page/js/error_input.js"></script>
     <script src="../../static/home_page/js/number_maska.js"></script>
