@@ -144,7 +144,7 @@ function calculateTotal() {
         document.getElementById('result').innerHTML = total.toFixed(2) + ' руб.';
     } else {
         // Если какое-то значение не было введено, выводим сообщение об ошибке
-        document.getElementById('result').innerHTML = '0';
+        document.getElementById('result').innerHTML = '0' + ' руб.';
     }
 }
 
