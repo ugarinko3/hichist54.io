@@ -536,20 +536,20 @@
                             <div class="text_title">
                                 <p class="text">Длина(в метрах):</p>
                             </div>
-                            <input class="input" type="number" id="a_square_length" onchange="calc()" />
+                            <input class="input" type="number" id="a_square_length"/>
                         </div>
                         <div class="square">
                             <div class="text_title">
                                 <p class="text">Ширина(в метрах):</p>
                             </div>
-                            <input class="input" type="number" id="a_square_width" onchange="calc()" />
+                            <input class="input" type="number" id="a_square_width"/>
                         </div>
                     </div>
                     <div class="manufacturing">
                         <div class="text_title">
                             <p class="text">Тип изготовления:</p>
                         </div>
-                        <select class="input_choice" onchange="calc()" id="type_manufacturing">
+                        <select class="input_choice" id="type_manufacturing">
                             <option value="0" selected="selected">Выберите вариант</option>
                             <option value="1000">Ручная работа</option>
                             <option value="2000">Машинная работа</option>
@@ -559,7 +559,7 @@
                         <div class="text_title">
                             <p class="text">Тип материала:</p>
                         </div>
-                        <select class="input_choice" onchange="calc()" id="type_design">
+                        <select class="input_choice"  id="type_design">
                             <option value="0" selected="selected">Выберите вариант</option>
                             <option value="250">Синтетика</option>
                             <option value="250">Шерсть</option>
@@ -574,15 +574,15 @@
                         </div>
                         <div class="states_from_button">
                             <label class="label_flex">
-                                <input type="radio" name="state" value="1" id="state_flex_1" onchange="calc()" checked>
+                                <input type="radio" name="state" value="1" id="state_flex_1"checked>
                                 <p class="text_label">Сухой ковёр без биологических загрязнений</p>
                             </label>
                             <label class="label_flex">
-                                <input type="radio" name="state" value="1.5" id="state_flex_2" onchange="calc()">
+                                <input type="radio" name="state" value="1.5" id="state_flex_2">
                                 <p class="text_label">Ковёр во влажном состоянии или после пожара</p>
                             </label>
                             <label class="label_flex">
-                                <input type="radio" name="state" value="1.5" id="state_flex_3" onchange="calc()">
+                                <input type="radio" name="state" value="1.5" id="state_flex_3">
                                 <p class="text_label">Есть биологические загрязнения (моча, рвота и т.д.)</p>
                             </label>
                         </div>

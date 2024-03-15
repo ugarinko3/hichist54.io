@@ -124,8 +124,44 @@ function showModal() {
         modal.classList.remove("active"); // Удаляем класс "active" через 5 секунд
     }, 5000);
 }
+function calculateTotal() {
+    // Получаем значения из полей ввода
+    var length = parseFloat(lengthInput.value);
+    var width = parseFloat(widthInput.value);
+    var manufacturing = parseFloat(manufacturingSelect.value);
+    var design = parseFloat(designSelect.value);
+    var state = parseFloat(document.querySelector('input[name="state"]:checked').value);
 
+    // Проверяем, что все необходимые значения были введены
+    if (!isNaN(length) && !isNaN(width) && !isNaN(manufacturing) && !isNaN(design) && !isNaN(state)) {
+        // Вычисляем площадь
+        var area = length * width;
 
+        // Выполняем расчет суммы
+        var total = (area * design + manufacturing) * state;
+
+        // Отображаем результат
+        document.getElementById('result').innerHTML = total.toFixed(2) + ' руб.';
+    } else {
+        // Если какое-то значение не было введено, выводим сообщение об ошибке
+        document.getElementById('result').innerHTML = '0';
+    }
+}
+
+var lengthInput = document.getElementById('a_square_length');
+var widthInput = document.getElementById('a_square_width');
+var manufacturingSelect = document.getElementById('type_manufacturing');
+var designSelect = document.getElementById('type_design');
+var stateRadios = document.querySelectorAll('input[name="state"]');
+
+// Назначаем обработчики событий для всех элементов формы
+lengthInput.addEventListener('input', calculateTotal);
+widthInput.addEventListener('input', calculateTotal);
+manufacturingSelect.addEventListener('change', calculateTotal);
+designSelect.addEventListener('change', calculateTotal);
+stateRadios.forEach(function(radio) {
+    radio.addEventListener('change', calculateTotal);
+});
 
 document.getElementById('form_name_phone').addEventListener('submit', function(event){
     event.preventDefault()

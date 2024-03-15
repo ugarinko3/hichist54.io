@@ -154,9 +154,21 @@ input[type="radio"]:hover {
 }
 .slide_five .summa {
     display: flex;
-    justify-self: center;
+    justify-content:center;
+    align-items: center;
     margin-top: 35px;
 }
+.slide_five .summa .text_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+}
+.slide_five .summa .text_title .text {
+    margin: 0;
+}
+
 .slide_five .button_modal {
     display: block;
     width: 80%;
