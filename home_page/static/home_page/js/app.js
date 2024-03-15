@@ -70,7 +70,7 @@ function slowSlider () {
     wrapperBox[counter].classList.add('active');
 }
 
-let second = 1000*2
+let second = 1000*5
 let TimerImage = setInterval(()=>slowSlider(), second)
 
 let blockSlider = document.getElementById('blockSlider')
