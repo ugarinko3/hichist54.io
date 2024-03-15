@@ -141,7 +141,7 @@ function calculateTotal() {
         var total = (area * design + manufacturing) * state;
 
         // Отображаем результат
-        document.getElementById('result').innerHTML = total.toFixed(2) + ' руб.';
+        document.getElementById('result').innerHTML = total + ' руб.';
     } else {
         // Если какое-то значение не было введено, выводим сообщение об ошибке
         document.getElementById('result').innerHTML = '0' + ' руб.';
