@@ -178,10 +178,6 @@ i.fa.fa-angle-left, i.fa.fa-angle-right{
     font-size: 18px;
     height: auto;
   }
-@-webkit-keyframes Animation {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
 @media  (max-width: 900px){
   .imageSlider {
     width: 180%;
@@ -209,5 +205,14 @@ i.fa.fa-angle-left, i.fa.fa-angle-right{
     left: 30%;
     top: 43%;
     transform: translate(center);
+  }
+}
+
+@keyframes Animation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
   }
 }
