@@ -4,19 +4,12 @@ var buttonFunctions = {
     "button_slide": setupSlideListeners,
     "button_pensia": setupPensiaListeners,
     "button_family": setupFamilyListeners
-    // Добавьте другие кнопки и функции по необходимости
 };
-
-// Проходим по каждой паре ключ-значение в объекте buttonFunctions
 for (var buttonId in buttonFunctions) {
-    // Получаем элемент кнопки по идентификатору
     var button = document.getElementById(buttonId);
     
-    // Если элемент существует, добавляем к нему обработчик события
     if (button) {
-        // Удаляем существующий обработчик события для данной кнопки
         button.removeEventListener("click", buttonFunctions[buttonId]);
-        // Добавляем новый обработчик события для данной кнопки
         button.addEventListener("click", buttonFunctions[buttonId]);
     }
 }

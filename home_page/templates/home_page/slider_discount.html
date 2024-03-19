@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home_page/css/slide_discount.css' %}">
+    <title>Slider Discount</title>
+</head>
+<body>
+    <div class="slide_discount" id="slide_discount">
+        <div class="name_class">
+            <p class="name_text">Специальные предложения</p>
+        </div>
+        <div class="line">
+            <span></span>
+        </div>
+        <div class="space"></div>
+        <div class="slide_discount_info">
+            <div class="slide-dis">
+                <div class="slide">
+                    <div class="text-dis">
+                        <div class="text_title">
+                            <p>Льготные цены для пенсионеров</p>
+                        </div>
+                        <div class="info_text">
+                            <p><span class="sizetext">200₽</span> за квадратный метр на стирку любого вида ковра, любой сложности загрязнения</p>
+                        </div>
+                        <div class="button-slide">
+                            <button class="buttom" type="button" value="0" id="button_pensia">Оформить заявку</button>
+                        </div>
+                    </div>
+                    <div class="image_discount">
+                        <img class="img-dis" src="../../static/home_page/img/discount_image/image_1.jpg">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="text-dis">
+                        <div class="text_title">
+                            <p>Льготные цены для многодетных семей</p>
+                        </div>
+                        <div class="info_text">
+                            <p><span class="sizetext">200₽</span> за квадратный метр на стирку любого вида ковра, любой сложности загрязнения</p>
+                        </div>
+                        <div class="button-slide">
+                            <button class="button" type="button"  id="button_family">Оформить заявку</button>
+                        </div>
+                    </div>
+                    <div class="image_discount">
+                        <img class="img-dis" src="../../static/home_page/img/discount_image/image_2.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

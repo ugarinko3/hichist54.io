@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home_page/css/slide_main.css' %}">
+    <title>Slider One</title>
+</head>
+<body>
+    <div class="slide_one" id="slide_one">
+        <div class="blockSlider" id="blockSlider">
+            <div class="FullArea">
+                <div class="imagesArea">
+                    <img class="imageSlider" src="{% static 'home_page/img/main_slide/slide_4.png' %}" alt="">
+                    <img class="imageSlider" src="{% static 'home_page/img/main_slide/slide_2.jpg' %}" alt="">
+                    <img class="imageSlider" src="{% static 'home_page/img/main_slide/slide_3.jpg' %}" alt="">
+                </div>
+
+                <div class="pointsAreaSize">
+                    <span class="point"></span>
+                    <span class="point"></span>
+                    <span class="point"></span>
+                </div>
+                <div class="btnsAreaSize">
+                    <div class="blockArrow" id="leftBtn"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+                    <div class="blockArrow" id="rightBtn"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                </div>
+                <div class="wrapper">
+                    <div class="box-info">
+                        <div class="box box_one">
+                            <h1>Доставка</h1>
+                            <p>Наша транспортная служба в удобное вам <span class="colortext">время</span> заберет ковер и привезет его обратно, как только закончим обработку. Мы уделяем особое внимание вашему удобству и безопасности.</p>
+                            <div class="button">
+                                <button type="button" id="button_slide">Оформить заявку</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-info">
+                        <div class="box box_two">
+                            <h1>Стирка ковров</h1>
+                            <p>от <span class="colortext">250</span> руб/м<sup>2</sup></p>
+                            <div class="button">
+                                <button onclick="scrollToDivTwo()" type="button" id="button_services">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-info">
+                        <div class="box box_three">
+                            <h1>Калькулятор</h1>
+                            <p>Рассчитайте <span class="colortext">цену</span> заранее. Просто используйте наш удобный калькулятор</p>
+                            <div class="button">
+                                <button onclick="scrollToDivThree()" type="button" id="button_calculator">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../static/home_page/js/app.js"></script>
+    </div>
+</body>
+</html>

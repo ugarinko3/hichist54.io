@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home_page/css/slide_8.css' %}">
+    <title>Slider Eight</title>
+</head>
+<body>
+    <div class="slide_eight">
+        <div class="name_class">
+            <p class="name_text">Адрес и контакты фабрики</p>
+        </div>
+        <div class="line">
+            <span></span>
+        </div>
+        <div class="space"></div>
+        <div class="eight">
+            <div class="info_slide_eight">
+                <div class="container_eight">
+                    <div class="container_box">
+                        <div class="space"></div>
+                        <div class="logo_text">
+                            <div class="logo">
+                                <img class="logo_boshka" src="../../static/home_page/img/logo/boshka.png">
+                            </div>
+                            <div class="title_text">Химчист</div>
+                        </div>
+                        <p class="title_info">Фабрика стирки ковров в Новосибирске</p>
+                        <div class="info_eight">
+                            <div class="info_slide">
+                                <div class="icon_info">
+                                    <img class="logo_icon" src="../../static/home_page/img/icon_slade/phone.png">
+                                </div>
+                                <div class="text_slide">
+                                    <span><a href="tel: +79137378283">+7 (913) 737-82-83</a></span>
+                                </div>
+                            </div>
+                            <div class="info_slide">
+                                <div class="icon_info">
+                                    <img class="logo_icon" src="../../static/home_page/img/icon_slade/mail.png">
+                                </div>
+                                <div class="text_slide">
+                                    <p>hichist.fabrika@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="info_slide">
+                                <div class="icon_info">
+                                    <img class="logo_icon" src="../../static/home_page/img/icon_slade/location.png">
+                                </div>
+                                <div class="text_slide">
+                                    <p>г.Новосибирск, ул. Грибоедова, 2Б</p>
+                                </div>
+                            </div>
+                            <div class="info_slide">
+                                <div class="icon_info">
+                                    <img class="logo_icon" src="../../static/home_page/img/icon_slade/clock.png">
+                                </div>
+                                <div class="text_slide">
+                                    <p>График работы: 9:00 - 20:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon_conection">
+                        <div class="vk">
+                            <p><a href="https://vk.com/hichist"><img  class="vk-icon" src="../../static/home_page/img/icon_slade/vk.png" width="30px" height="30px" border-radius="50"></a></p>
+                        </div>
+                        <div class="whatsapp">
+                            <p><a href=" https://api.whatsapp.com/send?phone=79137378283"><img  class="whatsapp-icon" src="../../static/home_page/img/icon_slade/whatsapp.png" width="30px" height="30px" border-radius="50"></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map_class">
+                <div class="map" id="map"></div>
+                <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU">
+                </script>
+                <script src="../../static/home_page/js/map.js"></script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

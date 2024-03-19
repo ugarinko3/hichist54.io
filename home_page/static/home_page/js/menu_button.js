@@ -1,69 +1,70 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Получаем параметры запроса из URL
-    const urlParams = new URLSearchParams(window.location.search);
-    
-    // Проверяем, существует ли параметр "action" и его значение
-    if (urlParams.has('action')) {
-        const action = urlParams.get('action');
-        // Выполняем функцию в зависимости от значения параметра "action"
-        switch (action) {
-            case 'executeFunction1':
-                scrollToDivOne(); // Замените "yourFunction1" на вашу функцию для Главной
-                break;
-            case 'executeFunction2':
-                scrollToDivTwo(); // Замените "yourFunction2" на вашу функцию для Услуг
-                break;
-            case 'executeFunction3':
-                scrollToDivThree(); // Замените "yourFunction3" на вашу функцию для Калькулятора
-                break;
-            case 'executeFunction4':
-                scrollToDivFour(); // Замените "yourFunction4" на вашу функцию для Этапов
-                break;
-            case 'executeFunction5':
-                scrollToDivFive(); // Замените "yourFunction5" на вашу функцию для Льгот
-                break;
-            default:
-                break;
-        }
-    }
-});
-
 function scrollToDivOne() {
-    offclick();
-    var targetDiv = document.getElementById('slide_one');
-    targetDiv.scrollIntoView({ behavior: 'smooth' });
+    checkAndScrollToElement('slide_one');
 }
+
 function scrollToDivTwo() {
-    offclick();
-    setTimeout(function() {
-        var targetDiv = document.getElementById('slide_six');
-        targetDiv.scrollIntoView({ behavior: 'smooth' });
-    });
+    checkAndScrollToElement('slide_six');
 }
+
 function scrollToDivThree() {
-    offclick();
-    var targetDiv = document.getElementById('slide_five');
-    targetDiv.scrollIntoView({ behavior: 'smooth' });
+    checkAndScrollToElement('slide_five');
 }
+
 function scrollToDivFour() {
-    offclick();
-    var targetDiv = document.getElementById('slide_four');
-    targetDiv.scrollIntoView({ behavior: 'smooth' });
+    checkAndScrollToElement('slide_four');
 }
+
 function scrollToDivFive() {
-    offclick();
-    var targetDiv = document.getElementById('slide_discount');
-    targetDiv.scrollIntoView({ behavior: 'smooth' });
+    checkAndScrollToElement('slide_discount');
 }
-function offclick(){
-    const windowInnerWidth = window.innerWidth
-    if (windowInnerWidth < 900 ){
-        if ($('.header_burger,.header_menu').hasClass('actived')) {
-            $('.header_burger,.header_menu').removeClass('actived');
+
+function checkAndScrollToElement(elementId) {
+    if (window.location.pathname === "/privacy") {
+        redirectToHomePage(elementId);
+        start(elementId);
+    } else {
+        scrollToElement(elementId);
+    }
+    offclick();
+}
+
+function scrollToElement(elementId) {
+    var targetDiv = document.getElementById(elementId);
+    targetDiv.scrollIntoView({ behavior: 'smooth', block: "start"  });
+}
+
+function offclick() {
+    const windowInnerWidth = window.innerWidth;
+    if (windowInnerWidth < 900) {
+        if ($('.header_burger, .header_menu').hasClass('actived')) {
+            $('.header_burger, .header_menu').removeClass('actived');
             $('body').removeClass('lock');
         }
     }
     if ($('.modal_window').hasClass('open')) {
         $('.modal_window').removeClass('open');
     }
+}
+
+function redirectToHomePage(targetElementId) {
+    window.location.href = "http://127.0.0.1:8000?reload=true&targetElementId=" + encodeURIComponent(targetElementId);
+}
+
+window.addEventListener("load", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const reloadParam = urlParams.get('reload');
+    const targetElementId = urlParams.get('targetElementId');
+
+    if (reloadParam === 'true' && targetElementId) {
+        start(targetElementId);
+    }
+});
+
+function start(targetElementId) {
+    setTimeout(function() {
+        var elementToScrollTo = document.getElementById(targetElementId);
+        if (elementToScrollTo) {
+            elementToScrollTo.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    }, 500); // Задержка в 1000 миллисекунд (1 секунда)
 }

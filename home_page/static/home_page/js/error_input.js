@@ -146,14 +146,17 @@ var widthInput = document.getElementById('a_square_width');
 var manufacturingSelect = document.getElementById('type_manufacturing');
 var designSelect = document.getElementById('type_design');
 var stateRadios = document.querySelectorAll('input[name="state"]');
+var formCalculator = document.getElementById('form_calculator');
 
-lengthInput.addEventListener('input', calculateTotal);
-widthInput.addEventListener('input', calculateTotal);
-manufacturingSelect.addEventListener('change', calculateTotal);
-designSelect.addEventListener('change', calculateTotal);
-stateRadios.forEach(function(radio) {
-    radio.addEventListener('change', calculateTotal);
-});
+if (lengthInput && widthInput && manufacturingSelect && designSelect && stateRadios.length > 0) {
+    lengthInput.addEventListener('input', calculateTotal);
+    widthInput.addEventListener('input', calculateTotal);
+    manufacturingSelect.addEventListener('change', calculateTotal);
+    designSelect.addEventListener('change', calculateTotal);
+    stateRadios.forEach(function(radio) {
+        radio.addEventListener('change', calculateTotal);
+    });
+}
 
 document.getElementById('form_name_phone').addEventListener('submit', function(event){
     event.preventDefault()
@@ -162,10 +165,13 @@ document.getElementById('form_name_phone').addEventListener('submit', function(e
         showModal();
     };
 });
-document.getElementById('form_calculator').addEventListener('submit', function(event){
-    event.preventDefault()
-    if (validation_calculator(this)==true){
-        document.getElementById("window").classList.remove("open");
-        showModal();
-    }
-});
+
+if (formCalculator) {
+    formCalculator.addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (validation_calculator(this) == true) {
+            document.getElementById("window").classList.remove("open");
+            showModal();
+        }
+    });
+}

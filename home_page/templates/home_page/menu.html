@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="{% static 'home_page/css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'home_page/css/main.css' %}">
+</head>
+<body class="">
+    <div class="menu">
+        <header class="header">
+            <div class="conteiner">
+                <div class="header_body">
+                    <a href="#" class="header_logo">
+                        <img src="../../static/home_page/img/logo/boshka.png">
+                    </a>
+                    <div class="header_burger">
+                        <span></span>
+                    </div>
+                    <nav class="header_menu">
+                        <ul class="header_list">
+                            <li>
+                                <button class="header_link" onclick="scrollToDivOne()" type="button">Главная</button>
+                            </li>
+                            <li>
+                                <button class="header_link" onclick="scrollToDivFour()" type="button">Этапы</button>
+                            </li>
+                            <li>
+                                <button class="header_link" onclick="scrollToDivFive()" type="button">Льготы</button>
+                            </li>
+                            <li>
+                                <button class="header_link" onclick="scrollToDivThree()" type="button">Калькулятор</button>
+                            </li>
+                            <li>
+                                <button class="header_link" onclick="scrollToDivTwo()" type="button">Услуги</button>
+                            </li>
+                            <li>
+                                <div class="info_eight">
+                                    <div class="info_slide">
+                                        <div class="icon_info">
+                                            <img class="logo_icon" src="../../static/home_page/img/icon_slade/phone.png">
+                                        </div>
+                                        <div class="text_slide">
+                                            <span><a href="tel: +79137378283">+7 (913) 737-82-83</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="info_slide">
+                                        <div class="icon_info">
+                                            <img class="logo_icon" src="../../static/home_page/img/icon_slade/location.png">
+                                        </div>
+                                        <div class="text_slide">
+                                            <p>г.Новосибирск, ул. Грибоедова, 2Б</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon_conection">
+                                    <div class="vk">
+                                        <p><a href="https://vk.com/hichist"><img  class="vk-icon" src="../../static/home_page/img/icon_slade/vk.png" width="30px" height="30px" border-radius="50"></a></p>
+                                    </div>
+                                    <div class="whatsapp">
+                                        <p><a href=" https://api.whatsapp.com/send?phone=79137378283"><img  class="whatsapp-icon" src="../../static/home_page/img/icon_slade/whatsapp.png" width="30px" height="30px" border-radius="50"></a></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="button_menu">
+                                    <button class="button" type="button"  id="button_menu_order">Оформить заявку</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="button_menu">
+                        <button class="button" type="button"  id="button_menu_order-2">Оформить заявку</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="../../static/home_page/js/menu.js"></script>
+    <script src="../../static/home_page/js/menu_button.js"></script>
+</body>
+</html>
