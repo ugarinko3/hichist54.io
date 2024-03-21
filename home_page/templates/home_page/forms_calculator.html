@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/home_page/css/from_calculator.css">
+</head>
+<body>
+    <div class="wrapper" id ="slide_five">
+        <div class="form">
+            {% csrf_token %}
+            <form action="{% url 'send_email' %}" method="POST" id="form" class="form_body">
+                <h1 class="form_title">КАЛЬКУЛЯТОР</h1>
+                <div class="form_item">
+                    <label for="formWight" class="form_label">Длина:</label>
+                    <input id="formWight" type="number" name="wight" class="form_input _req">
+                </div>
+                <div class="form_item">
+                    <label for="formHeight" class="form_label">Ширина:</label>
+                    <input id="formHeight" type="number" name="height" class="form_input _req">
+                </div>
+                <div class="form_item">
+                    <div class="form_label">Тип изготовления:</div>
+                    <select class="select" name="manufacturing" id="type_manu">
+                        <option class='choice' value="0" selected="selected">Выберите вариант</option>
+                        <option class='choice' value="1000">Ручная работа</option>
+                        <option class='choice' value="2000">Машинная работа</option>
+                    </select>
+                </div>
+                <div class="form_item">
+                    <div class="form_label">Тип материала:</div>
+                    <select name="design" class="select" id="type_desi">
+                        <option value="0" selected="selected">Выберите вариант</option>
+                        <option value="250">Синтетика</option>
+                        <option value="250">Шерсть</option>
+                        <option value="300">Вискоза</option>
+                        <option value="300">Шелк</option>
+                        <option value="280">Шегги</option>
+                    </select>
+                </div>
+                <div class="form_item">
+                    <div class="form_label">Состояние ковра:</div>
+                    <div class="options">
+                        <div class="options_item">
+                            <input id="form_one" checked type="radio" value="1" name="hand" class="options_input">
+                            <label for="form_one" class="options_label"><span>Сухой ковёр без биологических загрязнений</span></label>
+                        </div>
+                        <div class="options_item">
+                            <input id="form_two" type="radio" value="1.5" name="hand" class="options_input">
+                            <label for="form_two" class="options_label"><span>Ковёр во влажном состоянии или после пожара</span></label>
+                        </div>
+                        <div class="options_item">
+                            <input id="form_three" type="radio" value="1.5" name="hand" class="options_input">
+                            <label for="form_three" class="options_label"><span>Есть биологические загрязнения (моча, рвота и т.д.)</span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_item">
+                    <div class="summa">
+                        <div class="text_title">
+                            <p class="text">Сумма: </p>
+                        </div>
+                        <div id="result">0 руб.</div>
+                        <span class="icon_svg" id='typpy'>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                                <path class="one_setting" d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path class="two_setting" d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="form_item">
+                    <label for="formName" class="form_label">Имя:</label>
+                    <input id="formName" type="text" name="name" class="form_input _req">
+                </div>
+                <div class="form_item">
+                    <label for="formTel" class="form_label">Телефон:</label>
+                    <input id="formTel" type="tel" name="phone" class="form_input _req _phone">
+                </div>
+                <div class="form_item">
+                    <div class="form_label">Прикрепить фото</div>
+                    <div class="file">
+                        <div class="file_item">
+                            <input id="formImage"  accept=".jpg, .png, .gif" type="file" name="image" value="1" class="file_input">
+                            <div class="file_button">Выбрать</div>
+                        </div>
+                        <div id="formPreview" class="file_preview"></div>
+                    </div>
+                </div>
+                <div class="form_item">
+                    <div class="checkbox">
+                        <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox_input _req">
+                        <label for="formAgreement" class="checkbox_label"><span>Я даю свое согласие с обработкой персональных данных в соответствии с <a href="privacy" class="colortext">Условиями</a>*</span></label>
+                    </div>
+                </div>
+                <button type="submit" class="form_button" >Отправить</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="../../static/home_page/js/error_froms_calculator.js"></script>
+    {% include 'home_page/modal-successful.html' %}
+</body>
+</html>
