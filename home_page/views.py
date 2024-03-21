@@ -22,7 +22,7 @@ def forms_window(request):
             f'Заявка №{counter()}',
             f'Нужна консультация.\nТелефон: {phone}\nИмя: {name}.',
             settings.EMAIL_HOST_USER,
-            ['ugarinko3@gmail.com']
+            ['to_email']
         )
     return render(request, 'home_page/index.html')
 
@@ -56,7 +56,7 @@ def forms_calculator(request):
             f'Заявка №{counter()}',
             f'Сумма: {summa} рублей.\nТип изготовления: {manufacturing}.\nТип материала: {design}.\nТелефон: {phone}\nИмя: {name}.',
             settings.EMAIL_HOST_USER,
-            ['ugarinko3@gmail.com']
+            ['to_email']
         )
 
     return render(request, 'home_page/index.html')
