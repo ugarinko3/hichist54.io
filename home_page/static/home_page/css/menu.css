@@ -67,7 +67,7 @@ body {
 .button_menu {
   display: block;
   z-index: 2;
-  margin: 0px 20px 0px 0px;
+  margin: 0px 20px 10px 0px;
 }
 .header_list li {
   list-style: none;
@@ -89,20 +89,32 @@ body {
 }
 .button_menu button, .header_list .button_menu button {
   width: 200px;
-  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  background-color: #004979;
+  color: #fff;
+  font-size: 12px;
+  margin: 10px 0 0 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  cursor: pointer;
   border-radius: 20px;
-  border: 2px solid #003960;
-  transition: background .4s ease-out;
-  color: #003960;
-  font-size: 14px;
-  font-weight: bold;
+  box-shadow: 0 5px 0 #002035;
+  transition: background-color 0.3s ease 0s;
+  position: relative;
+  top: 0;
 }
 .button_menu button:hover, .header_list .button_menu button:hover {
-  background-color: #003960;
-  color: #fff;
-  border-radius: 20px;
+  background-color: #013353;
 }
 
+.button_menu button:active, .header_list .button_menu button:active {
+  top: 3px;
+  box-shadow: 0 2px 0 #002035;
+}
 
 @media (max-width: 900px) {
   .button_menu {
@@ -215,6 +227,8 @@ body {
   }
   .header_list .button_menu {
     display: block;
+    width: 200px;
+    margin: auto;
   }
 
 }

@@ -1,11 +1,11 @@
-.name_text {
+h1{
     display: block;
     margin-top: 25px;
     align-self: center;
     text-align: center;
     font-size: 24px; /* Размер шрифта */
     font-weight: bold; /* Жирный шрифт */
-    color: #003960;
+    color: #004979;
 }
 .name_class {
     display: block;

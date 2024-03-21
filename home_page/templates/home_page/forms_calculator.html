@@ -9,9 +9,11 @@
 <body>
     <div class="wrapper" id ="slide_five">
         <div class="form">
-            {% csrf_token %}
-            <form action="{% url 'send_email' %}" method="POST" id="form" class="form_body">
-                <h1 class="form_title">КАЛЬКУЛЯТОР</h1>
+            <form action="{% url 'forms_calculator' %}" method="POST" id="form" class="form_body">
+                {% csrf_token %}
+                <div class="name_class">
+                    <h1 class="name_text">КАЛЬКУЛЯТОР</h1>
+                </div>
                 <div class="form_item">
                     <label for="formWight" class="form_label">Длина:</label>
                     <input id="formWight" type="number" name="wight" class="form_input _req">
@@ -61,7 +63,7 @@
                         <div class="text_title">
                             <p class="text">Сумма: </p>
                         </div>
-                        <div id="result">0 руб.</div>
+                        <div id="result" name="summa">0 руб.</div>
                         <span class="icon_svg" id='typpy'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
                                 <path class="one_setting" d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -94,7 +96,7 @@
                         <label for="formAgreement" class="checkbox_label"><span>Я даю свое согласие с обработкой персональных данных в соответствии с <a href="privacy" class="colortext">Условиями</a>*</span></label>
                     </div>
                 </div>
-                <button type="submit" class="form_button" >Отправить</button>
+                <button type="submit" class="form_button">Отправить</button>
             </form>
         </div>
     </div>

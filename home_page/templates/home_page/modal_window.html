@@ -18,12 +18,13 @@
             <h2>Химчист</h2>
             <p>Оставьте ваш номер телефона и мы перезвоним вам для уточнения деталей заказа и расчета его стоимости!</p>
             <div class="input_name_phome">
-                <form action="" class="form" id="form_name_phone">
+                <form action="{% url 'forms_window' %}" method="POST" class="form" id="form_name_phone">
+                    {% csrf_token %}
                     <div class="input-box">
-                        <input class="input" type="text" placeholder="Ваше имя" id="username_modal">
+                        <input class="input" type="text" placeholder="Ваше имя" id="username_modal" name="name_window">
                     </div>
                     <div class="input-box">
-                        <input class="input" type="tel" id="phone_modal" name="phone">   
+                        <input class="input" type="tel" id="phone_modal" name="phone_window">   
                     </div>
                     <p class="info_calculator">Для того чтобы узнать примерную стоимость заказа, можете воспользоваться нашим <button onclick="scrollToDivThree()"><span class="colortext">калькулятором</span></button></p>
                     <button type="submit" class="button_modal" id="button_modal-1">Отправить</button>
@@ -43,6 +44,6 @@
     <script src="https://unpkg.com/imask"></script>
     <script src="../../static/home_page/js/number_maska.js"></script>
     <script src="../../static/home_page/js/modal_window_open.js"></script>
-    <script defer src="../../static/home_page/js/error_input.js"></script>
+    <script src="../../static/home_page/js/error_input.js"></script>
 </body>
 </html>

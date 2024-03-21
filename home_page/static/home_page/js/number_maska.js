@@ -1,4 +1,4 @@
-var element = document.getElementById('phone_calculator');
+var element = document.getElementById('formTel');
 var element_2 = document.getElementById('phone_modal');
 var maskOptions = {
     mask: '+7(000)000-00-00',

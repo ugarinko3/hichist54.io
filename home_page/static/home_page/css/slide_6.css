@@ -60,8 +60,9 @@
   font-family:Arial, Helvetica, sans-serif;
   align-self: center;
   text-align: center;
-  margin-left: 100px;
-  font-size: 35px; /* Размер шрифта */
+  margin: 10px 0px 0px 100px;
+  font-size: 30px; /* Размер шрифта */
+  font-weight: bold;
   color: #B48242;
 }
 
@@ -129,6 +130,7 @@
   display: block;
   align-self: center;
   text-align: center;
+  margin: 25px 0 0 0;
   font-size: 16px; /* Размер шрифта */
   color: #868789;
 }
