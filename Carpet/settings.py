@@ -72,8 +72,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.mail.ru'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'your_email'  # Замените на ваш адрес электронной почты
-EMAIL_HOST_PASSWORD = 'your_passsword'  
+EMAIL_HOST_USER = 'swiftcleaning@mail.ru'  # Замените на ваш адрес электронной почты
+EMAIL_HOST_PASSWORD = '4hKxXCL0CFaEkkPjAGZ2'  
 
 TEMPLATES = [
     {
