@@ -41,7 +41,7 @@ SECRET_KEY = 'django-insecure-%+tlh$q%#k5mhax&60cwfvw^nvn+8=(kp4r%oshvi&dq56)=up
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ugarinko3.pythonanywhere.com',]]
 
 
 # Application definition
@@ -140,6 +140,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = '/media/'
+STATIC_ROOT = '/home/ugarinko3/hichist54.io/static'
+MEDIA_ROOT = '/home/ugarinko3/hichist54.io/media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
